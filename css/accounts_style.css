@@ -1,0 +1,144 @@
+body {
+  background: url(../images/gear_background.jpg) repeat fixed ;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+.red {
+  color: rgba(204, 0, 0, 1);
+}
+
+.largetext {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.mediumtext {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.smalltext {
+  font-size: 12px;
+}
+
+.godown {
+  margin-bottom: 10px;
+}
+
+.simplelink {
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.simplelink:hover {
+  color: rgba(204, 0, 0, 1);
+}
+
+.thinbtn {
+  display: block;
+  margin: 5px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  background: rgba(204, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.thinbtn:hover {
+  border: solid black 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(204, 0, 0, 1);
+}
+
+.loginbtn {
+  border: solid white 2px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(0, 0, 0, 1);;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+.loginbtn:hover {
+  background-color: rgba(30, 30, 30, 1);
+}
+
+.createbtn {
+  border: solid white 2px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  background: rgba(204, 0, 0, 1);
+  font-size: 20px;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.createbtn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(204, 0, 0, 1);
+}
+
+.accountcontainer {
+  width: 1000px;
+  display: inline-block;
+  margin-top: 50px;
+  border: solid 2px;
+  border-color: #000000;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, .7);
+  border-radius: 13px 13px 13px 13px;
+}
+
+.loginsettings {
+  display: inline-block;
+  width: 460px;
+  float: left;
+  padding: 20px;
+}
+
+.shippingsettings {
+  display: inline-block;
+  width: 460px;
+  float: right;
+  padding: 20px;
+}
+
+.clearall {
+  clear: both;
+}
+
+
+.inputwrapper {
+  width: 60%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.inputwrapper input{
+  width: 284px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+
+
