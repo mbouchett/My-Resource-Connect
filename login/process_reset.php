@@ -10,8 +10,8 @@ $newPassword = $_POST['pw1'];
 $date = date('Y-m-d');
 
 //hash the passwords
-$password=crypt($password, '$2a$bugger$');
-$newPassword=crypt($newPassword, '$2a$bugger$');
+$hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
+$newPassword=crypt($newPassword, '$2a$07$theclockswerestrikingthirteen$');
 
 // check to see if the user already exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

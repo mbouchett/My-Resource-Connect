@@ -10,7 +10,7 @@ $ein = $_POST['ein'];
 $date = date('Y-m-d');
 
 //hash the password
-$password=crypt($password, '$2a$bugger$');
+$hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 
 //echo $name."<br>";
 //echo $email."<br>";

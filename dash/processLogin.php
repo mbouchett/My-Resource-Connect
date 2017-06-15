@@ -5,6 +5,7 @@ session_start(); // start up your PHP session!
     $userName = $_POST['username'];
     $password = $_POST['pw'];
 
+
 // include db credentials  $db_user, $db_pw, $db_db
 include "../db.php";
 
@@ -24,10 +25,13 @@ if($num_results==0){
 $resource=mysqli_fetch_assoc($result);
 
 //if username and password don't match
-$hash=crypt($password, '$2a$bugger$');
+$hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
+
+echo $hash;
+exit;
 
 if(trim($hash) != trim($resource['admin_pw'])){
-   header('location: index.php?message=Username Password Combination Not Found');
+   header('location: index.php?message=bad login');
    die;
 }
 

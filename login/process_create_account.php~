@@ -12,12 +12,12 @@ $date = date('Y-m-d');
 //hash the password
 $password=crypt($password, '$2a$bugger$');
 
-echo $name."<br>";
-echo $email."<br>";
-echo $password."<br>";
-echo $ein."<br>";
-echo $date."<br>";
-exit;
+//echo $name."<br>";
+//echo $email."<br>";
+//echo $password."<br>";
+//echo $ein."<br>";
+//echo $date."<br>";
+//exit;
 
 // check to see if the user already exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

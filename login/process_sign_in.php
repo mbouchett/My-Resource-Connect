@@ -10,7 +10,7 @@ $password = $_POST['pw'];
 $date = date('Y-m-d');
 
 //hash the password
-$password=crypt($password, '$2a$bugger$');
+$hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 
 // check to see if the user exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

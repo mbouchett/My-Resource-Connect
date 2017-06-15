@@ -5,4 +5,12 @@ $db_db = "myresour_data";
 // $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 //include "db.php";
 $path = "http://www.myresourceconnect.org";
+/*
+$db_user = "myresour_user";
+$db_pw = "5tgb!QAZ3edc";
+$db_db = "myresour_data";
+// $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+//include "db.php";
+$path = "http://www.myresourceconnect.org";
+*/
 ?>

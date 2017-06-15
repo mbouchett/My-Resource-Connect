@@ -5,6 +5,7 @@ session_start(); // start up your PHP session!
     $userName = $_POST['username'];
     $password = $_POST['pw'];
 
+
 // include db credentials  $db_user, $db_pw, $db_db
 include "../db.php";
 
@@ -17,17 +18,20 @@ mysqli_close($db); //close the connection
 
 //if the account is not found
 if($num_results==0){
-   	header('Location: index.php?message=bad login');
+   	header('location: index.php?message=bad login');
     die;
 }
 
 $resource=mysqli_fetch_assoc($result);
 
 //if username and password don't match
-$hash=crypt($password, '$2a$bugger$');
+$hash=crypt($password, '$2a$07$usesomesillystringforsalt$');
+
+echo $hash;
+exit;
 
 if(trim($hash) != trim($resource['admin_pw'])){
-   header('Location: index.php?message=Username Password Combination Not Found');
+   header('location: index.php?message=bad login');
    die;
 }
 
@@ -36,6 +40,6 @@ $_SESSION['usernum']=$resource['admin_ID']; // Save User Info For The Session
 $_SESSION['username']=$resource['admin_name'];
 $_SESSION['userlevel']=$resource['admin_level'];
 
-header('Location: dashMenu.php');
+header('location: dashMenu.php');
 die;
 ?>
