@@ -44,7 +44,7 @@ if($result){
 </head>
 <body>
 <img height="150" src="images/logo.jpg" alt="My Resource Connect" /><br>
-Find out what's needed in your area and how *YOU* can help.
+Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
  <a href="../account/" title="<?= $name ?>" >My Account</a>
 <?php }else{ ?>
