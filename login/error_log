@@ -1,3 +1,0 @@
-[10-Jun-2017 12:12:41 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/myresourceconnec/public_html/login/process_create_account.php on line 12
-[13-Jun-2017 10:05:32 America/New_York] PHP Warning:  include(../page_elements/top_bar.php): failed to open stream: No such file or directory in /home/myresourceconnec/public_html/login/forgot_password.php on line 18
-[13-Jun-2017 10:05:32 America/New_York] PHP Warning:  include(): Failed opening '../page_elements/top_bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/myresourceconnec/public_html/login/forgot_password.php on line 18
