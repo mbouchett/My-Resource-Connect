@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 body {
   background: url(../images/gear_background.jpg) repeat fixed ;
   background-size: 100% 100%;
@@ -45,7 +48,7 @@ body {
   padding-right: 20px;
   background: rgba(0, 0, 0, 1);
   font-size: 16px;
-  background: rgba(204, 0, 0, 1);
+  background: rgba(110, 134, 140, 1);
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
   font-weight: bold;
@@ -55,8 +58,8 @@ body {
   border: solid black 2px;
   padding-top: 2px;
   padding-bottom: 2px;
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(204, 0, 0, 1);
+  background-color: rgba(181, 194, 197, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .loginbtn {
