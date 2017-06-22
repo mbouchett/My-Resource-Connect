@@ -26,7 +26,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Password must be 6 characters or more";
+    er.innerHTML = "Password must be 6 characters or more";
     er.style.display = "inline-block";
     return
  }
@@ -36,7 +36,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Password must contain at least 1 letter and one number";
+    er.innerHTML = "Password must contain at least 1 letter and one number";
     er.style.display = "inline-block";
     return
  }
@@ -46,7 +46,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Passwords must match";
+    er.innerHTML = "Passwords must match";
     er.style.display = "inline-block";
     return
  }
@@ -57,7 +57,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Password too long 49 character max";
+    er.innerHTML = "Password too long 49 character max";
     er.style.display = "inline-block";
     return
  }

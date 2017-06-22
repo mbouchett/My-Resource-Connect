@@ -34,7 +34,7 @@ if($num_results > 0){
 // enter new account into the database
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "INSERT `".$db_db."`.`orgs` (`org_name`, `org_email`, `org_pw`, `org_EIN`)
-        VALUES ('$name', '$email', '$password', '$ein')";
+        VALUES ('$name', '$email', '$hash', '$ein')";
 
 //perform action and get the customerID generated
 if ($db->query($sql) === TRUE) {

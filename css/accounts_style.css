@@ -69,14 +69,14 @@ body {
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  background: rgba(0, 0, 0, 1);;
+  background: rgba(110, 134, 140, 1;;
   font-size: 20px;
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
 }
 
 .loginbtn:hover {
-  background-color: rgba(30, 30, 30, 1);
+  background-color: rgba(181, 194, 197, 1);
 }
 
 .createbtn {

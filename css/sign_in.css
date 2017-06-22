@@ -73,14 +73,14 @@ body {
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  background: rgba(0, 0, 0, 1);;
+  background: rgba(110, 134, 140, 1);;
   font-size: 20px;
   color: rgba(255, 255, 255, 1);
   cursor: pointer;
 }
 
 .loginbtn:hover {
-  background-color: rgba(30, 30, 30, 1);
+  background-color: rgba(181, 194, 197, 1);
 }
 
 .createbtn {
@@ -91,7 +91,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 50px;
-  background: rgba(204, 0, 0, 1);
+  background: rgba(110, 134, 140, 1);
   font-size: 20px;
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
@@ -101,8 +101,8 @@ body {
   border: solid black 2px;
   padding-top: 3px;
   padding-bottom: 3px;
-  background-color: rgba(255, 255, 255, 1);
-  color: rgba(204, 0, 0, 1);
+  background-color: rgba(181, 194, 197, 1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .loginformcontainer {
