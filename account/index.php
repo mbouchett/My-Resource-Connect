@@ -25,7 +25,7 @@ $user=mysqli_fetch_assoc($result);
 	<link rel="SHORTCUT ICON" href="../images/logo.png">
 </head>
 <body>
-<img height="150" src="../images/logo.jpg" alt="My Resource Connect" /><br>
+<a href="../index.php"><img height="150" src="../images/logo.jpg" alt="My Resource Connect" /></a><br></br>
 <div class="loginsettings">
     <div class="mediumtext"><?= $name ?> Profile</div>
     <a class="thinbtn" href="change_password.php">Change my password</a>
