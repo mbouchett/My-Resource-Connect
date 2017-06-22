@@ -12,6 +12,9 @@ $date = date('Y-m-d');
 //hash the password
 $hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 
+//echo $hash;
+//exit;
+
 // check to see if the user exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT `org_email`, `org_pw`, `org_name`, `org_ID` FROM orgs WHERE `org_email` = '".$email."'";
@@ -29,7 +32,7 @@ if($num_results < 1){
 $user=mysqli_fetch_assoc($result);
 
 // check to see if passwords match
-if($password != $user['org_pw']){
+if($hash != $user['org_pw']){
     header('Location: sign_in.php?message=No account exists for this email password combination.');
     die;
 }
