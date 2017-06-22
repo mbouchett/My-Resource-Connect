@@ -32,7 +32,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>First name must be less than 50 characters";
+    er.innerHTML = "First name must be less than 50 characters";
     er.style.display = "inline-block";
     return
  }
@@ -42,7 +42,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>Last name must be less than 50 characters";
+    er.innerHTML = "Last name must be less than 50 characters";
     er.style.display = "inline-block";
     return
  }
@@ -53,7 +53,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>Street address must be less than 126 characters";
+    er.innerHTML = "Street address must be less than 126 characters";
     er.style.display = "inline-block";
     return
  }
@@ -63,7 +63,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>Address Line 2 must be less than 126 characters";
+    er.innerHTML = "Address Line 2 must be less than 126 characters";
     er.style.display = "inline-block";
     return
  }
@@ -73,7 +73,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>City must be less than 50 characters";
+    er.innerHTML = "City must be less than 50 characters";
     er.style.display = "inline-block";
     return
  }
@@ -83,7 +83,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>State must be less than 30 characters";
+    er.innerHTML = "State must be less than 30 characters";
     er.style.display = "inline-block";
     return
  }
@@ -93,7 +93,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>Zip must be less than 10 characters";
+    er.innerHTML = "Zip must be less than 10 characters";
     er.style.display = "inline-block";
     return
  }
@@ -117,7 +117,7 @@ function validateForm(){
     document.getElementById('city').style.backgroundColor = "#CC99CC";
     document.getElementById('state').style.backgroundColor = "#CC99CC";
     document.getElementById('zip').style.backgroundColor = "#CC99CC";
-    er.innerHTML = "<span class='icon-warning red'></span>Be sure to fill all the highlighted fields";
+    er.innerHTML = "Be sure to fill all the highlighted fields";
     er.style.display = "inline-block";
     return
  }

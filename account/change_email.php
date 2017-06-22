@@ -1,13 +1,14 @@
 <?php
 // Get the cookies
-$ID = $_COOKIE['ID'];
-$name = $_COOKIE['name'];
+    $ID = $_COOKIE['ID'];
+    $name = $_COOKIE['name'];
 include "../db.php";
 
 //if not logged in redirect to login
 if(!$name){
 	header('location: ../login/');
 }
+
 // get any error message
 $message = $_REQUEST['message'];
 
@@ -26,12 +27,13 @@ $user=mysqli_fetch_assoc($result);
 <html>
 
 <head>
-  <title>Change User Name: <?= $name ?></title>
+  <title>Change Email Address: <?= $name ?></title>
   <link rel="stylesheet" type="text/css" href="../css/sign_in.css">
-  <script language="javascript" src="../js/change_username.js"></script>
+  <script language="javascript" src="../js/change_email.js"></script>
 </head>
 
 <body>
+
 <div>
     <?php if($message){ ?>
     <div class="error"><span class="icon-warning red"></span><?= $message ?></div>
@@ -40,14 +42,14 @@ $user=mysqli_fetch_assoc($result);
 <div id="error"></div><br>
 
 <div class="loginformcontainer">
-    <span class="largetext">Choose a new User Name</span><br>
-<form id="changeUsername" action="process_change_username.php" method="post">
+    <span class="largetext">Choose a new email address.</span><br>
+<form id="changeEmail" action="process_change_email.php" method="post">
     <div class="inputwrapper">
-        New Username: <input onkeyPress="checkForReturn(event)" id="name" name="name" ><br>
+        New Email Address: <input onkeyPress="checkForReturn(event)" id="email" name="email" ><br>
     </div>
-    <div><a class="createbtn" onclick="validateForm()">Update User Name</a></div><br>
+    <div><a class="createbtn" onclick="validateForm()">Update Email Address</a></div><br>
 </form>
-<a class="loginbtn" href="index.php">Cancel Update User Name</a><br><br>
+<a class="loginbtn" href="index.php">Cancel Update Email Address</a><br><br>
 </div>
 
 </body>

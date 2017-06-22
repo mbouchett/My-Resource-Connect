@@ -26,7 +26,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'></span>Not a valid email address<br>Please correct and try again.";
+    er.innerHTML = "Not a valid email address<br>Please correct and try again.";
     er.style.display = "inline-block";
     return
  }

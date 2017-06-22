@@ -26,7 +26,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Username must be less than 126 characters";
+    er.innerHTML = "Username must be less than 126 characters";
     er.style.display = "inline-block";
     return
  }
@@ -36,7 +36,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "<span class='icon-warning red'><'span>Username is a required field";
+    er.innerHTML = "Username is a required field";
     document.getElementById('name').style.backgroundColor = "#CC99CC";
     er.style.display = "inline-block";
     return
