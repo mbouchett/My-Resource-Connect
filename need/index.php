@@ -2,7 +2,7 @@
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 
-include "db.php";
+include "../db.php";
 // get categories
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = 'SELECT * FROM `cats` ORDER BY `cat_name`';
@@ -39,18 +39,16 @@ if($result){
 <html>
 <head>
    <title>My Resource Connect</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="SHORTCUT ICON" href="images/logo.png">
+	<link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<link rel="SHORTCUT ICON" href="../images/logo.png">
 </head>
 <body>
-<img height="150" src="images/logo.jpg" alt="My Resource Connect" /><br>
-Find out what's needed in your area and how YOU can help.
-<?php if($name){ ?> 
- <a href="account/" title="<?= $name ?>" >My Account</a>
-<?php }else{ ?>
-<a href="login/sign_in.php" >Sign In</a>
-<?php } ?>
+<a href="../index.php"><img height="50" src="../images/logo.jpg" alt="My Resource Connect" /></a><br>
+Post A Need
 <hr width="900px"><br>
+Please select a category or click
+<a href="../account/" title="<?= $name ?>" >here</a> to cancel.
+<br>
 <div class="frontpage">
 		<?php for($i = 0; $i < $catCount; $i++){ ?>
 			<table class="tableCol">
@@ -65,7 +63,7 @@ Find out what's needed in your area and how YOU can help.
 						for($ii = 0; $ii < $subCatCount; $ii++){ 
 							if($subCat[$ii]['cat_ID'] == $cats[$i]['cat_ID']) {			
 					?>
-					<a href="browseNeed.php?cat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
+					<a href="addNeed.php?subcat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
 					<?php }  } ?>				
 					</td>
 				</tr>							
@@ -74,7 +72,7 @@ Find out what's needed in your area and how YOU can help.
 </div><br>
 <hr width="900px">
 <?php if($name){ ?>
-<span style="font-size: 10px;">Currently Logged In As: <?= $name ?><a href="account/log_out.php"> (not you?)</a>
+<span style="font-size: 10px;">Currently Logged In As: <?= $name ?><a href="../account/log_out.php"> (not you?)</a>
 <?php }?>
 </span>
 </body>

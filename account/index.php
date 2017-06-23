@@ -1,4 +1,5 @@
 <?php
+//account/index.php
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 include "../db.php";
@@ -33,6 +34,8 @@ $user=mysqli_fetch_assoc($result);
     <?= $user['org_name'] ?>
     <a class="thinbtn" href="change_email.php">Change my Email</a>
     <?= $user['org_email'] ?>
+    <a class="thinbtn" href="../need/" >Post A Need</a>
+    <a class="thinbtn" href="../index.php" >Return To My Resource Connect</a>
     <a class="thinbtn" href="log_out.php" >Log Out</a>
 </div>
 </body>
