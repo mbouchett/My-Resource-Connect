@@ -3,8 +3,11 @@ a {
 }
 body {
   background: url(../images/gear_background.jpg) repeat fixed ;
-  background-size: 100% 100%;
+  background-size: 100%;
   text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+.logn {
 }
 
 .red {
@@ -23,10 +26,6 @@ body {
 
 .smalltext {
   font-size: 12px;
-}
-
-.godown {
-  margin-bottom: 10px;
 }
 
 .simplelink {
@@ -48,7 +47,7 @@ body {
   padding-right: 20px;
   background: rgba(0, 0, 0, 1);
   font-size: 16px;
-  background: rgba(110, 134, 140, 1);
+  background-color: rgba(110, 134, 140, 1);
   color: rgba(0, 0, 0, 1);
   cursor: pointer;
   font-weight: bold;
@@ -69,9 +68,9 @@ body {
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  background: rgba(110, 134, 140, 1;;
-  font-size: 20px;
+  background: rgba(110, 134, 140, 1);
   color: rgba(255, 255, 255, 1);
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -96,32 +95,6 @@ body {
 .createbtn:hover {
   background-color: rgba(255, 255, 255, 1);
   color: rgba(204, 0, 0, 1);
-}
-
-.accountcontainer {
-  width: 1000px;
-  display: inline-block;
-  margin-top: 50px;
-  border: solid 2px;
-  border-color: #000000;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  background-color: rgba(255, 255, 255, .7);
-  border-radius: 13px 13px 13px 13px;
-}
-
-.loginsettings {
-  display: inline-block;
-  width: 460px;
-  float: left;
-  padding: 20px;
-}
-
-.shippingsettings {
-  display: inline-block;
-  width: 460px;
-  float: right;
-  padding: 20px;
 }
 
 .clearall {

@@ -27,16 +27,16 @@ $user=mysqli_fetch_assoc($result);
 </head>
 <body>
 <a href="../index.php"><img height="150" src="../images/logo.jpg" alt="My Resource Connect" /></a><br></br>
-<div class="loginsettings">
-    <div class="mediumtext"><?= $name ?> Profile</div>
-    <a class="thinbtn" href="change_password.php">Change my password</a>
-    <a class="thinbtn" href="change_username.php">Edit my user name</a>
-    <?= $user['org_name'] ?>
-    <a class="thinbtn" href="change_email.php">Change my Email</a>
-    <?= $user['org_email'] ?>
-    <a class="thinbtn" href="../need/" >Post A Need</a>
-    <a class="thinbtn" href="../index.php" >Return To My Resource Connect</a>
-    <a class="thinbtn" href="log_out.php" >Log Out</a>
-</div>
+	<div class="logn">
+		<div class="mediumtext"><?= $name ?> Profile</div>
+		<a class="thinbtn" href="change_password.php">Change my password</a>
+		<a class="thinbtn" href="change_username.php">Edit my user name</a>
+		<?= $user['org_name'] ?>
+		<a class="thinbtn" href="change_email.php">Change my Email</a>
+		<?= $user['org_email'] ?>
+		<a class="thinbtn" href="../need/" >Post A Need</a>
+		<a class="thinbtn" href="../index.php" >Return To My Resource Connect</a>
+		<a class="thinbtn" href="log_out.php" >Log Out</a>
+	</div>
 </body>
 </html>
