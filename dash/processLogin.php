@@ -26,8 +26,8 @@ $resource=mysqli_fetch_assoc($result);
 
 //if username and password don't match
 $hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
-echo $hash;
-exit;
+//echo $hash;
+//exit;
 
 
 if(trim($hash) != trim($resource['admin_pw'])){

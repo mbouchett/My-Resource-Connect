@@ -1,6 +1,8 @@
 <?php
 // need/addNeed.php
-
+$name = $_COOKIE['name'];
+$ID = $_COOKIE['ID'];
+$message = $_REQUEST['message'];
 
 include "../db.php";
 
@@ -19,7 +21,17 @@ mysqli_close($db); 								//close the connection
 if($result){
 	$subCat = mysqli_fetch_assoc($result);
 } 
-
-echo $subCat['subcat_name'];
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Post a new need for: <?= $name ?></title>
+</head>
+<body>
+<?= $name ?><br>
+Post a new need for <?= $subCat['subcat_name']; ?>
+
+</body>
+</html>
