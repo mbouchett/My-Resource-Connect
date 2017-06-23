@@ -28,10 +28,33 @@ if($result){
 <head>
 <meta charset="utf-8" />
 <title>Post a new need for: <?= $name ?></title>
+
+  <!-- 
+  		This is needed for the calendar
+  		Date: <input name="theDate" type="text" id="datepicker"> <--Put this in your HTML
+  -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker(); 
+  } );
+  </script>
+<!-- End Calendars -->
+
 </head>
 <body>
-<?= $name ?><br>
-Post a new need for <?= $subCat['subcat_name']; ?>
+<?= $name ?><br></br>
+Post a new need for <?= $subCat['subcat_name']; ?><br>
+<form action="processAddNeed.php" method="post">
+Give your need a title: <input type="text" name="need_title"><br>
+Describe your need:
+<textarea name="need_description"></textarea></br>
+The date this need will expire: <input name="theDate" type="text" id="datepicker"><br>
+<input type="submit" value="Post Your Need">
 
+</form>
 </body>
 </html>
