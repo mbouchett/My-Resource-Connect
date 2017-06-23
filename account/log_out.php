@@ -7,6 +7,6 @@ setcookie("name", "", time() - 3600, "/");
 
 
 // redirect to ...
-header('Location: ../index.php');
+header('location: ../index.php');
 
 ?>

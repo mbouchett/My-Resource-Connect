@@ -13,6 +13,7 @@ if(!isset($_SESSION['username'])){
 		<link rel="SHORTCUT ICON" href="../images/logo.png">
 	</head>
 	<body>
-	<a href="manageCats.php">Manage Categories</a>
+	<a href="manageCats.php">Manage Categories</a><br>
+	<a href="logout.php" >Logout</a>
 	</body>
 </html>

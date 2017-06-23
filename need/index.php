@@ -1,6 +1,7 @@
 <?php
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
+$message = $_REQUEST['message'];
 
 include "../db.php";
 // get categories
@@ -24,8 +25,6 @@ $sql = "SELECT * FROM `subcat`
         ON `subcat`.`cat_ID` = `cats`.`cat_ID`
         ORDER BY `subcat`.`subcat_name`";
         
-$message = $_REQUEST['message'];
-
 $result = mysqli_query($db, $sql); 			// create the query object
 mysqli_close($db); //close the connection
 if($result){
