@@ -21,6 +21,7 @@ $hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 
 // check to see if the user already exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+
 $sql = "SELECT `org_email`, `org_pw`, `org_ID` FROM orgs WHERE `org_email` = '".$email."'";
 $result = mysqli_query($db, $sql);              // create the query object
 $num_results=mysqli_num_rows($result);          //How many records meet select
@@ -33,6 +34,12 @@ if($num_results > 0){
 
 // enter new account into the database
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+
+// sanitize input
+$ein = mysqli_real_escape_string($db, $ein);
+$name = mysqli_real_escape_string($db, $name);
+//the rest have already been verified pre-post
+
 $sql = "INSERT `".$db_db."`.`orgs` (`org_name`, `org_email`, `org_pw`, `org_EIN`)
         VALUES ('$name', '$email', '$hash', '$ein')";
 

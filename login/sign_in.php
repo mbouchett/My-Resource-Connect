@@ -41,6 +41,7 @@ $message = $_REQUEST['message'];
      <div class="smalltext godown">New to MyResourceConnect?</div>
     <div>
         <a class="createbtn" href="create_account.php">Create A New Account</a>
+		  <a class="createbtn" href="../index.php">Cancel</a>
     </div>
         <br>
     <span class="smalltext"><a class="simplelink" href="forgot_password.php">Forgot your password?</a></span>

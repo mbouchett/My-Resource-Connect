@@ -44,7 +44,7 @@ $sql = "UPDATE `".$db_db."`.orgs
        SET `org_pw` = '".$newPassword."'
        WHERE `org_ID` = '".$org_ID."';";
 //perform action
-$result = mysqli_query($db, $sql); // create the query object                         // create the query object
+$result = mysqli_query($db, $sql); // create the query object
 mysqli_close($db); //close the connection
 
 if($result){

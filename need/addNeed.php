@@ -6,7 +6,7 @@ $message = $_REQUEST['message'];
 
 include "../db.php";
 
-$subCat = $_REQUEST['subcat'];
+$subcat = $_REQUEST['subcat'];
 
 
 //get subcats
@@ -19,7 +19,7 @@ $sql = "SELECT * FROM `subcat`
 $result = mysqli_query($db, $sql); 			// create the query object
 mysqli_close($db); 								//close the connection
 if($result){
-	$subCat = mysqli_fetch_assoc($result);
+	$subCatDat = mysqli_fetch_assoc($result);
 } 
 ?>
 
@@ -46,15 +46,22 @@ if($result){
 
 </head>
 <body>
+
+<div>
+    <?php if($message){ ?>
+    <div class="error"><span class="icon-warning red"><?= $message ?></span></div>
+    <?php } ?>
+</div>
+
 <?= $name ?><br></br>
-Post a new need for <?= $subCat['subcat_name']; ?><br>
+Post a new need for <?= $subCatDat['subcat_name']; ?><br>
 <form action="processAddNeed.php" method="post">
 Give your need a title: <input type="text" name="need_title"><br>
 Describe your need:
 <textarea name="need_description"></textarea></br>
-The date this need will expire: <input name="theDate" type="text" id="datepicker"><br>
-<input type="submit" value="Post Your Need">
-
+The date this need will expire: <input default="ASAP" name="need_by" type="text" id="datepicker"><br>
+<input type="submit" value="Post Your Need" />
+<input type="hidden" name="subcat_ID" value="<?= $subcat ?>" />
 </form>
 </body>
 </html>
