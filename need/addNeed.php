@@ -79,15 +79,15 @@ td{border: black thin solid;}
 
 <span class="orgname"><?= $name ?></span>
 
-<div>Post a new need for: <?= $subCatDat['subcat_name']; ?></div>
+<div>Post a new need for: <?= $subCatDat['subcat_name']; ?></div><br>
 <div class="logn">
 	<form name="addneed" action="processAddNeed.php" method="post">
-	Give your need a title: <input type="text" name="need_title"><br>
+	Give your need a title: <input type="text" name="need_title"><br><br>
 	Describe your need:
-	<textarea name="need_description"></textarea></br>
-	The date this need will expire: <input default="ASAP" name="need_by" type="text" id="datepicker"><br>
+	<textarea name="need_description"></textarea></br><br>
+	The date this need will expire: <input class="datebox" default="ASAP" name="need_by" type="text" id="datepicker"><br><br>
 	<a onClick="document.addneed.submit()" class="thinbtn" type="submit">Add Need</a>
-   <a href="../account" class="thinbtn red" type="submit">Cancel</a>               		
+   <a href="../account" class="thinbtn" type="submit">Cancel</a>               		
 	<input type="hidden" name="subcat_ID" value="<?= $subcat ?>" />
 	</form>
 </div>
