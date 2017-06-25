@@ -23,10 +23,10 @@ $user=mysqli_fetch_assoc($result);
 <head>
    <title>My Resource Connect - <?= $name ?></title>
 	<link rel="stylesheet" href="../css/accounts_style.css" type="text/css" />
-	<link rel="SHORTCUT ICON" href="../images/logo.png">
+	<link rel="SHORTCUT ICON" href="../images/icon.png">
 </head>
 <body>
-<a href="../index.php"><img height="150" src="../images/logo.jpg" alt="My Resource Connect" /></a><br></br>
+<a href="../index.php"><img height="150" src="../images/logo.png" alt="My Resource Connect" /></a><br></br>
 	<div class="logn">
 		<div class="mediumtext"><?= $name ?> Profile</div>
 		<a class="thinbtn" href="change_password.php">Change my password</a>

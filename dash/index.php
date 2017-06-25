@@ -12,7 +12,7 @@ $message = $_REQUEST['message'];
 <html>
 <head>
    <title>My Resource Connect - Dash</title>
-	<link rel="SHORTCUT ICON" href="../images/logo.png">
+	<link rel="SHORTCUT ICON" href="../images/icon.png">
 	<link rel="stylesheet" href="../css/accounts_style.css" type="text/css" />
 	
 	<!-- Sets the focus tot the user name at load -->
@@ -28,7 +28,7 @@ $message = $_REQUEST['message'];
  <div class="error"><span class="icon-warning red"></span><?= $message ?></div>
  <?php } ?>
  
-<img id="logo" height="150" src="../images/logo.jpg" alt="My Resource Connect" />
+<img id="logo" height="150" src="../images/logo.png" alt="My Resource Connect" />
 <br><br>
 	<div class="logn">
 	    <form name="Login" action="processLogin.php" method="post">

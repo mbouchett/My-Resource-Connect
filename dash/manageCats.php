@@ -46,11 +46,11 @@ if($result){
 <html>
 	<head>
 		<title>MyResourceConnect - Manage Categories</title>
-		<link rel="SHORTCUT ICON" href="../images/logo.png">
+		<link rel="SHORTCUT ICON" href="../images/icon.png">
 		<link rel="stylesheet" href="../css/style.css" type="text/css" />
 	</head>
 	<body>
-	<img id="logo" height="150" src="../images/logo.jpg" alt="My Resource Connect" />
+	<img id="logo" height="150" src="../images/logo.png" alt="My Resource Connect" />
 <br>
 		<?php for($i = 0; $i < $catCount; $i++){ ?>
 			<table class="tableCol">

@@ -39,10 +39,10 @@ if($result){
 <head>
    <title>My Resource Connect</title>
 	<link rel="stylesheet" href="../css/style.css" type="text/css" />
-	<link rel="SHORTCUT ICON" href="../images/logo.png">
+	<link rel="SHORTCUT ICON" href="../images/icon.png">
 </head>
 <body>
-<a href="../index.php"><img height="50" src="../images/logo.jpg" alt="My Resource Connect" /></a><br>
+<a href="../index.php"><img height="150" src="../images/logo.png" alt="My Resource Connect" /></a><br>
 Post A Need
 <hr width="900px"><br>
 Please select a category or click
