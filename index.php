@@ -40,10 +40,10 @@ if($result){
 <head>
    <title>My Resource Connect</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
-	<link rel="SHORTCUT ICON" href="images/logo.png">
+	<link rel="SHORTCUT ICON" href="images/icon.png">
 </head>
 <body>
-<img height="150" src="images/logo.jpg" alt="My Resource Connect" /><br>
+<img height="150" src="images/logo.png" alt="My Resource Connect" /><br>
 Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
  <a href="account/" title="<?= $name ?>" >My Account</a>
