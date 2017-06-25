@@ -28,8 +28,11 @@ $message = $_REQUEST['message'];
 </div>
 
 <div class="loginformcontainer">
-    <span class="largetext">Sign In To MyResourceConnect!</span>
+    <span class="largetext">Sign In To MyResourceConnect!</span><br>
     <form id="loginForm" action="process_sign_in.php" method="post">
+	 Sign In As: 
+    <input type="radio" name="type" value="donor" checked><span style="font-size:small;"> Donor </span>
+    <input type="radio" name="type" value="org" ><span style="font-size:small;">Charitable Organization</span><br><br>
     <div class="inputwrapper">
         Email: <span><input onkeyPress="checkForReturn(event)" id="email" name="email" ></span> <br>
         Password: <input onkeyPress="checkForReturn(event)" id="pw" type="password" name="pw" ><br>

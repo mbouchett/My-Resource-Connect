@@ -74,7 +74,7 @@ Find out what's needed in your area and how YOU can help.
 </div><br>
 <hr width="900px">
 <?php if($name){ ?>
-<span style="font-size: 10px;">Currently Logged In As: <?= $name ?><a href="account/log_out.php"> (not you?)</a>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
 <?php }?>
 </span>
 </body>
