@@ -87,7 +87,7 @@ td{border: black thin solid;}
 	<textarea name="need_description"></textarea></br>
 	The date this need will expire: <input default="ASAP" name="need_by" type="text" id="datepicker"><br>
 	<a onClick="document.addneed.submit()" class="thinbtn" type="submit">Add Need</a>
-   <a href="../index.php" class="thinbtn red" type="submit">Cancel</a>               		
+   <a href="../account" class="thinbtn red" type="submit">Cancel</a>               		
 	<input type="hidden" name="subcat_ID" value="<?= $subcat ?>" />
 	</form>
 </div>
