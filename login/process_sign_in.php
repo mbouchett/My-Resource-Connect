@@ -40,7 +40,8 @@ if($type == "org") {		//organization login
 	    setcookie("type", "org", time() + (86400 * 30), "/"); // 86400 = 1 day
 	    
 
-}else {echo $hash; /*					//donor login
+}
+if($type == "org") {		//organization login $hash; /*					//donor login
 	// check to see if the user exists
 	$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 	$sql = "SELECT `donor_email`, `donor_pw`, `donor_name`, `donor_ID` FROM donors WHERE `donor_email` = '".$email."'";
@@ -71,7 +72,7 @@ if($type == "org") {		//organization login
 	    setcookie("ID", $user['donor_ID'], time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("name", $user['donor_name'], time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("type", "donor", time() + (86400 * 30), "/"); // 86400 = 1 day	
-*/}
+}
 
 // redirect to ...
 header('Location: ../index.php');*/
