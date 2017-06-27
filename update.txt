@@ -1,10 +1,19 @@
 ---------------------------------------------------------------------------------
+
+06/26/2017
+update "donor" table
+Modify Structure
+add field: donor_verified, type: BOOLEAN, default 0
+add field: donor_telephone, type: TINYTEXT
+add field: donor_code, type: INT, length: 6
+
+---------------------------------------------------------------------------------
 ****** COMPLETE ******
 
 06/25/2017
 Update "needs" table
 Modify Structure
-change field need_by from DATE type to TYNYTEXT type
+change field need_by from DATE type to TINYTEXT type
 
 Done! Although I hope you meant "TINYTEXT" - FB 06/25/17
 

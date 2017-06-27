@@ -99,10 +99,13 @@ function validateEmail(email){
 
 function accountType(){
 	var actTyp = document.getElementById('orgRadio');
-	var xField = document.getElementById('einField');
+	var ein = document.getElementById('einField');
+	var phone = document.getElementById('telephone');
 	if(actTyp.checked){
-		xField.style.display = "inline-block";
+		ein.style.display = "inline-block";
+		phone.style.display = "none";
 	}else{
-		xField.style.display = "none";	
+		ein.style.display = "none";	
+		phone.style.display = "inline-block";
 	}
 }

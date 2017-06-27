@@ -46,7 +46,7 @@ if($result){
 Post A Need
 <hr width="900px"><br>
 Please select a category or click
-<a href="../account/" title="<?= $name ?>" >here</a> to cancel.
+<a href="../account/" title="<?= $name ?>" >here to cancel.</a>
 <br>
 <div class="frontpage">
 		<?php for($i = 0; $i < $catCount; $i++){ ?>

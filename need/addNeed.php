@@ -5,17 +5,24 @@ $ID = $_COOKIE['ID'];
 $message = $_REQUEST['message'];
 include "../db.php";
 $subcat = $_REQUEST['subcat'];
+
 //get subcats
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT * FROM `subcat`
         LEFT JOIN `cats`
-        ON `subcat`.`cat_ID` = `cats`.`cat_ID`
-        WHERE `subcat`.`subcat_ID`=".$subCat;
+        ON `subcat`.`cat_ID` = `cats`.`cat_ID`";
         
 $result = mysqli_query($db, $sql); 			// create the query object
-mysqli_close($db); 								//close the connection
+mysqli_close($db); 	
+							//close the connection
 if($result){
-	$subCatDat = mysqli_fetch_assoc($result);
+	$catsCount = mysqli_num_rows($result); //How many records meet select
+	for($i=0; $i<$catsCount; $i++) {
+		$subCats[$i] = mysqli_fetch_assoc($result);
+		if($subCats[$i]['subcat_ID'] == $subcat) {
+			$subCatName = $subCats[$i]['subcat_name'];
+		}
+	}
 } 
 
 // load past needs
@@ -79,7 +86,7 @@ td{border: black thin solid;}
 
 <span class="orgname"><?= $name ?></span>
 
-<div>Post a new need for: <?= $subCatDat['subcat_name']; ?></div><br>
+<div>Post a new need for: <?= $subCatName ?></div><br>
 <div class="logn">
 	<form name="addneed" action="processAddNeed.php" method="post">
 	Give your need a title: <input type="text" name="need_title"><br><br>
