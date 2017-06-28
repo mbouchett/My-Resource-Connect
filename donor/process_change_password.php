@@ -15,9 +15,10 @@ $password=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 $newPassword=crypt($newPassword, '$2a$07$theclockswerestrikingthirteen$');
 
 
+
 // check to see if the user already exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);;
-$sql = "SELECT `org_email`, `org_pw`, `org_name`, `org_ID` FROM orgs WHERE `org_ID` = '".$ID."'";
+$sql = "SELECT `donor_email`, `donor_pw`, `donor_name`, `donor_ID` FROM donors WHERE `donor_ID` = '".$ID."'";
 $result = mysqli_query($db, $sql);              // create the query object
 $num_results=mysqli_num_rows($result);          //How many records meet select
 mysqli_close($db); //close the connection
@@ -32,16 +33,16 @@ if($num_results == 0){
 }
 
 // check the temporary password
-if($password != $user['org_pw']){
+if($password != $user['donor_pw']){
     header('Location: change_password.php?message=(1)Unable to reset the password for this account<br>Please try again or call (802) 373-1035.');
     die;
 }
 
 // Reset password
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
-$sql = "UPDATE `".$db_db."`.orgs
-       SET `org_pw` = '".$newPassword."'
-       WHERE `org_ID` = '".$ID."';";
+$sql = "UPDATE `".$db_db."`.donors
+       SET `donor_pw` = '".$newPassword."'
+       WHERE `donor_ID` = '".$ID."';";
 //perform action
 $result = mysqli_query($db, $sql); // create the query object
 mysqli_close($db); //close the connection

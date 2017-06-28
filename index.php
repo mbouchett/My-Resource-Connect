@@ -1,6 +1,7 @@
 <?php
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
+$type = $_COOKIE['type'];
 
 include "db.php";
 // get categories
@@ -43,10 +44,10 @@ if($result){
 	<link rel="SHORTCUT ICON" href="images/icon.png">
 </head>
 <body>
-<img height="150" src="images/logo.png" alt="My Resource Connect" /><br>
+<img height="150" src="images/logo.png" alt="My Resource Connect" title="<?= $type ?>" /><br>
 Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
- <a href="account/" title="<?= $name ?>" >My Account</a>
+ <a href="accountType.php" title="<?= $name ?>" >My Account</a>
 <?php }else{ ?>
 <a href="login/sign_in.php" >Sign In</a>
 <?php } ?>
