@@ -36,7 +36,7 @@ $message = $_REQUEST['message'];
         <div class="inputwrapper">
             Name:<input onkeyPress="checkForReturn(event)" id="name" name="name"><br>
             Email:<input onkeyPress="checkForReturn(event)" id="email" name="email"><br>
-            <div id="telephone" >Telephone: <input onkeyPress="checkForReturn(event)" id="phone" name="phone"><br></div>
+            <div id="telephone" >Telephone: <input onkeyPress="checkForReturn(event)" id="phone" name="phone" placeholder="(555) 555-1212"><br></div>
             <div id="einField" >EIN: <input onkeyPress="checkForReturn(event)" id="ein" name="ein"><br></div>
             Password: <span class="smalltext">*Must contain at least 1 uppercase letter at least 1 number and be at least 8 characters in length*</span><br>
             Enter Password: <input onkeyPress="checkForReturn(event)" id="pw" name="pw" type="password"><br>

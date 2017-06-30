@@ -17,6 +17,7 @@ function validateForm(){
     // create object variables from form
  var name = document.getElementById('name').value;
  var mail = document.getElementById('email').value;
+ var phone = document.getElementById('phone').value;
  var pw = document.getElementById('pw').value;
  var pw2 = document.getElementById('pw2').value;
  var form = document.getElementById("createAccountForm");
@@ -38,7 +39,7 @@ function validateForm(){
     er.innerHTML = "";
     er.style.display = "none";
  } else {
-    er.innerHTML = "Password must be 6 characters or more";
+    er.innerHTML = "Password must be 8 characters or more";
     er.style.display = "inline-block";
     return;
  }
@@ -85,13 +86,23 @@ function validateForm(){
     return;
  }
  
- // Check #6 Account Type Selected
+ // Check#6: validate telephone
+ if(/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/g.test(phone)){
+    er.innerHTML = "";
+    er.style.display = "none";
+ } else {
+    er.innerHTML = "Please use format: (555) 555-1212 or 555-555-1212 for Telephone.";
+    er.style.display = "inline-block";
+    return;
+ } 
+ 
+// Check #7 Account Type Selected
 var select = document.getElementById( 'actType' );
-    selIndex = select.selectedIndex;
-    if (selIndex == 0) {
-    	alert("Plese select account type");
-    	return;
-    }
+selIndex = select.selectedIndex;
+if (selIndex == 0) {
+	alert("Plese select account type");
+ 	return;
+}
 
  // if all checks clear submit the form
  form.submit();
