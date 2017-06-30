@@ -27,9 +27,12 @@ $message = $_REQUEST['message'];
   <div class="loginformcontainer">
   <span class="largetext">Create Your Login!</span>
     <form id="createAccountForm" action="process_create_account.php" method="post">
-    			Account Type: 
-            <input type="radio" onclick="accountType()" name="type" value="donor" checked><span style="font-size:small;"> Donor </span>
-            <input id="orgRadio" onclick="accountType()" type="radio" name="type" value="org" ><span style="font-size:small;">Charitable Organization</span><br><br>
+	 Account Type: 
+	 <select id="actType" name="type" >
+	 	<option value="-" selected>Please Select</option>
+		<option value="donor">Donor Account</option>
+		<option value="org">Charitable Orginization</option>
+	 </select><br><br>
         <div class="inputwrapper">
             Name:<input onkeyPress="checkForReturn(event)" id="name" name="name"><br>
             Email:<input onkeyPress="checkForReturn(event)" id="email" name="email"><br>

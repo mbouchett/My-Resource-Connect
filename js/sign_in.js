@@ -27,7 +27,7 @@ function validateForm(){
  } else {
     er.innerHTML = "Not a valid email address<br>Please correct and try again.";
     er.style.display = "inline-block";
-    return
+    return;
  }
  // Check#5 password length
  if(pw.length < 50){
@@ -37,7 +37,7 @@ function validateForm(){
  } else {
     er.innerHTML = "Password too long 49 character max";
     er.style.display = "inline-block";
-    return
+    return;
  }
 
  // Check#5 name length
@@ -48,8 +48,16 @@ function validateForm(){
  } else {
     er.innerHTML = "Name too long 49 character max";
     er.style.display = "inline-block";
-    return
+    return;
  }
+// Check #6 Account Type Selected
+var select = document.getElementById( 'actType' );
+    selIndex = select.selectedIndex;
+    if (selIndex == 0) {
+    	alert("Plese select account type");
+    	return;
+    }
+ 	
  // if all checks clear submit the form
  form.submit();
 }

@@ -19,7 +19,8 @@ $hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 //echo $password."<br>";
 //echo $ein."<br>";
 //echo $date."<br>";
-//echo $phone;
+//echo $phone."<br>";
+//echo $type."<br>";
 //exit;
 if($type == "org") {
 	// check to see if the user already exists
@@ -59,7 +60,9 @@ if($type == "org") {
 	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
 		 setcookie("org", "donor", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
-}else{
+}
+
+if($type == "donor"){
 	// check to see if the user already exists
 	$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 
@@ -72,6 +75,7 @@ if($type == "org") {
 	    header('Location: create_account.php?message=Account already exists for this email.');
 	    die;
 	}
+	
 	// enter new account into the database
 	$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 	
@@ -79,20 +83,19 @@ if($type == "org") {
 	$phone = mysqli_real_escape_string($db, $phone);
 	$name = mysqli_real_escape_string($db, $name);
 	//the rest have already been verified pre-post
-	$code = rand(100000,999999);
+	$code = rand(100000,999999);	
 		
 	$sql = "INSERT `".$db_db."`.`donors` (`donor_name`, `donor_email`, `donor_pw`, `donor_telephone`, `donor_code`)
      VALUES ('$name', '$email', '$hash', '$phone', '$code')";
 
-
-   //perform action and get the customerID generated
+   //perform action and get the ID generated
 	if ($db->query($sql) === TRUE) {
-	$customerID = $db->insert_id;
-	} else $customerID = 0;
-	mysqli_close($db); //close the connection 1qaz@WSX3edc
+	$ID = $db->insert_id;
+	} else $ID = 0;
+	mysqli_close($db); //close the connection 
 	
 	// perform login and set cookies
-	if($customerID > 0){
+	if($ID > 0){
 	// account good - set cookies
 	    setcookie("ID", $customerID, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
