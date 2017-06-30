@@ -107,14 +107,16 @@ function validateEmail(email){
 }
 
 function accountType(){
-	var actTyp = document.getElementById('orgRadio');
+	var select = document.getElementById( 'actType' );
+	var selIndex = select.selectedIndex;
 	var ein = document.getElementById('einField');
 	var phone = document.getElementById('telephone');
-	if(actTyp.checked){
+	if (selIndex == 2) {
 		ein.style.display = "inline-block";
 		phone.style.display = "none";
 	}else{
 		ein.style.display = "none";	
 		phone.style.display = "inline-block";
 	}
+	return;
 }

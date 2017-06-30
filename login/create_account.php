@@ -28,7 +28,7 @@ $message = $_REQUEST['message'];
   <span class="largetext">Create Your Login!</span>
     <form id="createAccountForm" action="process_create_account.php" method="post">
 	 Account Type: 
-	 <select id="actType" name="type" >
+	 <select id="actType" name="type" onchange="accountType();" >
 	 	<option value="-" selected>Please Select</option>
 		<option value="donor">Donor Account</option>
 		<option value="org">Charitable Orginization</option>

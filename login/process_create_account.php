@@ -49,16 +49,16 @@ if($type == "org") {
 	
 	//perform action and get the customerID generated
 	if ($db->query($sql) === TRUE) {
-	$customerID = $db->insert_id;
-	} else $customerID = 0;
+	$ID = $db->insert_id;
+	} else $ID = 0;
 	mysqli_close($db); //close the connection
 	
 	// perform login and set cookies
-	if($customerID > 0){
+	if($ID > 0){
 	// account good - set cookies
-	    setcookie("ID", $customerID, time() + (86400 * 30), "/"); // 86400 = 1 day
+	    setcookie("ID", $ID, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
-		 setcookie("org", "donor", time() + (86400 * 30), "/"); // 86400 = 1 day
+		 setcookie("type", "org", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
 }
 
