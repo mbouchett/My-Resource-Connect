@@ -110,10 +110,6 @@ if($type == "donor"){
 	$to = str_replace($chs, "", $phone);
 	$to = "+1".$to;
 	$text = "Account Authorization Code: ".$code."\n";
-	
-	echo $to."<br>";
-	echo $text."<br>";
-	exit;
 
 //***********************************************************************************************
 
