@@ -1,0 +1,176 @@
+body {
+  background: url(../images/burlington_map2.jpg) repeat fixed center;
+  background-size: 100%;
+}
+
+hr {
+ width: 90%;
+ border: 0;
+ height: 2px;
+ background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ }
+
+#wrapper {
+  width: 100%;
+  display: inline-block;
+  padding-top: 50px;
+}
+
+.category {
+  display: inline-block;
+  width: 1000px;
+  background: rgba(204, 0, 0, 1);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px 0 #808080;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.itemswrapper {
+  width: 1000px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0 #808080;
+  margin-bottom: 50px;
+  padding-top: 10px;
+}
+
+.item {
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 1);
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 300px;
+  height: 500px;
+  vertical-align: top;
+}
+
+.item.left {
+
+}
+
+.item.center {
+
+
+}
+
+.item.right {
+
+
+}
+
+.item img{
+  max-width: 290px;
+
+  max-height: 298px;
+
+}
+
+.verticalizer {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 300px;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  line-height: 0px;
+
+}
+
+.verticalizer:hover {
+   border: dashed 1px red;
+    height: 298px;
+  width: 298px;
+}
+
+.iteminfobox {
+  padding-top: 10px;
+  width: 100%;
+  height: 190px;
+  text-align: left;
+  display: inline-block;
+/*  background: rgb(255,255,255);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); */
+  position: relative;
+}
+
+.itemdescription {
+  padding-bottom: 5px;
+  display: block;
+  width: 280px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.itemprice {
+
+  color: rgba(204, 0, 0, 1);
+
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 40px;
+  left:0;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.addtocartbtn {
+  width: 270px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+  background: rgba(204, 0, 0, 1);
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  text-align: center;
+  display:block;
+  position: absolute;
+  bottom: 0;
+}
+
+.addtocartbtn:hover {
+  border: solid black 2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 13px;
+  padding-right: 13px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(204, 0, 0, 1);
+}
+
+.savebutton {
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+  height: 45px;
+  position: absolute;
+  top:0;
+  right: 10px;
+  padding-right: 5px;
+  padding-top: 7px;
+  cursor: pointer;
+}
+.savebutton img{
+
+  width: 30px;
+
+
+}
