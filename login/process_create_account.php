@@ -2,7 +2,10 @@
 // establish default time for the server
 date_default_timezone_set('America/New_York');
 include_once "../db.php";
+<<<<<<< HEAD
 require __DIR__ . '/twilio-php-master/Twilio/autoload.php'; 
+=======
+>>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
 
 //Get variables posted from the create_account.html form
 $name = $_POST['name'];
@@ -110,6 +113,7 @@ if($type == "donor"){
 	$to = str_replace($chs, "", $phone);
 	$to = "+1".$to;
 	$text = "Account Authorization Code: ".$code."\n";
+<<<<<<< HEAD
 
 //***********************************************************************************************
 
@@ -134,10 +138,24 @@ $client->messages->create(
 );
 
 //***********************************************************************************************
+=======
+/* ACCOUNT VERIFICATION STILL NEEDS WORK
+//***********************************************************************************************
+
+
+//***********************************************************************************************
+
+>>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
 	// redirect to ...
 	header('Location: .donorAuth.php');
 	die;
 }*/
+<<<<<<< HEAD
 die;
 
+=======
+	// redirect to ...
+	header('Location: ../index.php');
+	die;
+>>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
 ?>
