@@ -6,7 +6,7 @@ $message = $_REQUEST['message'];
 include "../db.php";
 $subcat = $_REQUEST['subcat'];
 
-// load past needs
+// load needs
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 if($subcat) {
 	$sql = "SELECT * FROM `needs`

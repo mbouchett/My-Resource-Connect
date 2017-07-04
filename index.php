@@ -48,6 +48,7 @@ if($result){
 Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
  <a href="accountType.php" title="<?= $name ?>" >My Account</a>
+<?php if($type == "org") { ?> <br> <a href="need/" >Post A Need</a> <?php } ?>
 <?php }else{ ?>
 <a href="login/sign_in.php" >Sign In</a>
 <?php } ?>
@@ -66,7 +67,7 @@ Find out what's needed in your area and how YOU can help.
 						for($ii = 0; $ii < $subCatCount; $ii++){ 
 							if($subCat[$ii]['cat_ID'] == $cats[$i]['cat_ID']) {			
 					?>
-					<a href="browse/browseNeed.php?cat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
+					<a href="browse/browseNeed.php?subcat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
 					<?php }  } ?>				
 					</td>
 				</tr>							
