@@ -66,7 +66,7 @@ Find out what's needed in your area and how YOU can help.
 						for($ii = 0; $ii < $subCatCount; $ii++){ 
 							if($subCat[$ii]['cat_ID'] == $cats[$i]['cat_ID']) {			
 					?>
-					<a href="browseNeed.php?cat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
+					<a href="browse/browseNeed.php?cat=<?= $subCat[$ii]['subcat_ID']?>"><?= $subCat[$ii]['subcat_name'] ?></a><br>
 					<?php }  } ?>				
 					</td>
 				</tr>							
