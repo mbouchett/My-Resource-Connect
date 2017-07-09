@@ -82,6 +82,8 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 		</textarea><br>
 		<button value="I can do this!" type="submit">Send this question to the organization</button>
 	</form>
+	<hr width="900px">
+	<button type="submit" onClick="history.go(-1)">Cancel And Return</button>
 </div>	
 </body>
 </html>

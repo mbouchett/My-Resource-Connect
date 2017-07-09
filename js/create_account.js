@@ -86,17 +86,9 @@ function validateForm(){
     return;
  }
  
- // Check#6: validate telephone
- if(/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/g.test(phone)){
-    er.innerHTML = "";
-    er.style.display = "none";
- } else {
-    er.innerHTML = "Please use format: (555) 555-1212 or 555-555-1212 for Telephone.";
-    er.style.display = "inline-block";
-    return;
- } 
+
  
-// Check #7 Account Type Selected
+// Check #6 Account Type Selected
 var select = document.getElementById( 'actType' );
 selIndex = select.selectedIndex;
 if (selIndex == 0) {
@@ -104,6 +96,17 @@ if (selIndex == 0) {
  	return;
 }
 
+ // Check#7: validate telephone
+ if (selIndex == 1) {
+	 if(/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/g.test(phone)){
+	    er.innerHTML = "";
+	    er.style.display = "none";
+	 } else {
+	    er.innerHTML = "Please use format: (555) 555-1212 or 555-555-1212 for Telephone.";
+	    er.style.display = "inline-block";
+	    return;
+	 } 
+}
  // if all checks clear submit the form
  form.submit();
 }

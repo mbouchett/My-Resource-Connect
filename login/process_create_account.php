@@ -2,10 +2,8 @@
 // establish default time for the server
 date_default_timezone_set('America/New_York');
 include_once "../db.php";
-<<<<<<< HEAD
-require __DIR__ . '/twilio-php-master/Twilio/autoload.php'; 
-=======
->>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
+
+//require __DIR__ . '/twilio-php-master/Twilio/autoload.php'; 
 
 //Get variables posted from the create_account.html form
 $name = $_POST['name'];
@@ -70,6 +68,7 @@ if($type == "org") {
 	header('Location: ../index.php');
 	die;
 }
+
 if($type == "donor"){
 	// check to see if the user already exists
 	$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
@@ -105,7 +104,7 @@ if($type == "donor"){
 	// perform login and set cookies
 	if($ID > 0){
 	// account good - set cookies
-	    setcookie("ID", $customerID, time() + (86400 * 30), "/"); // 86400 = 1 day
+	    setcookie("ID", $ID, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("type", "donor", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
@@ -113,8 +112,11 @@ if($type == "donor"){
 	$to = str_replace($chs, "", $phone);
 	$to = "+1".$to;
 	$text = "Account Authorization Code: ".$code."\n";
-<<<<<<< HEAD
-
+	// redirect to ...
+	header('Location: ../index.php');
+	die;
+}
+/*
 //***********************************************************************************************
 
 // Use the REST API Client to make requests to the Twilio REST API
@@ -145,17 +147,12 @@ $client->messages->create(
 
 //***********************************************************************************************
 
->>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
+
 	// redirect to ...
 	header('Location: .donorAuth.php');
 	die;
 }*/
-<<<<<<< HEAD
-die;
+/*
 
-=======
-	// redirect to ...
-	header('Location: ../index.php');
-	die;
->>>>>>> 17c741c234e9626e02c44624f50b219d447864f2
+	*/
 ?>
