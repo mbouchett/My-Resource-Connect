@@ -31,6 +31,8 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 <html>
 <head>
 <meta charset="utf-8" />
+	<link rel="stylesheet" href="../css/pledge_style.css" type="text/css" />
+	<link rel="SHORTCUT ICON" href="../images/icon.png">
 <title>Pledge</title>
 </head>
 <body>
@@ -44,40 +46,42 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
     <?php } ?>
 </div>
 <?php if($name){ ?> 
- 
-<?php if($type == "org") { ?> 
-<br> <a href="need/" >Post A Need</a> <br>
-<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
-<a href="accountType.php" title="<?= $name ?>" >My Account</a>
-<?php } ?>
-<?php if($type == "donor") { ?> 
-<br>
-<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
-<?php } ?>
-<?php }else{ ?>
-<a href="login/sign_in.php" >Sign In</a>
-<?php } ?>
+<div class="user">  
+	<?php if($type == "org") { ?>
+	<br> <a href="need/" >Post A Need</a> <br>
+	Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+	<a href="accountType.php" title="<?= $name ?>" >My Account</a>
+	<?php } ?>
+	<?php if($type == "donor") { ?> 
+	<br>
+	Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+	<?php } ?>
+	<?php }else{ ?>
+	<a href="login/sign_in.php" >Sign In</a>
+	<?php } ?>
+</div>
 <hr width="900px">
 <!-- end header portion -->
-
-<?= $need['org_name'] ?><br>
-<?= $need['need_title'] ?><br>
-<hr width="900px">
-<?= $need['need_description'] ?>
-<hr width="900px">
-<?= $name ?> is ready to help you out!<br>
-<form action="processPledge.php" method="POST">
-	Message to the organization:<br>
-	<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge">
-	</textarea><br>
-	<button value="I can do this!" type="submit">I can do this!</button>
-</form>
-<hr width="900px">
-<form action="processQuestion.php" method="POST">
-	I have a question about this need.<br>
-	<textarea name="message" rows="7" cols="70" placeholder="Enter your question about this need here.">
-	</textarea><br>
-	<button value="I can do this!" type="submit">Send this question to the organization</button>
-</form>
+<div class="container">
+	<span class="orgttl"><?= $need['org_name'] ?></span><br>
+	<?= $need['need_title'] ?><br>
+	<hr width="900px">
+	<?= $need['need_description'] ?>
+	<hr width="900px">
+	<?= $name ?> is ready to help you out!<br>
+	<form action="processPledge.php" method="POST">
+		Message to the organization:<br>
+		<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge">
+		</textarea><br>
+		<button value="I can do this!" type="submit">I can do this!</button>
+	</form>
+	<hr width="900px">
+	<form action="processQuestion.php" method="POST">
+		I have a question about this need.<br>
+		<textarea name="message" rows="7" cols="70" placeholder="Enter your question about this need here.">
+		</textarea><br>
+		<button value="I can do this!" type="submit">Send this question to the organization</button>
+	</form>
+</div>	
 </body>
 </html>

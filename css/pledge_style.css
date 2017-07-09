@@ -1,0 +1,24 @@
+body {
+ margin: 0;
+ padding: 0;
+ text-align: center;
+ font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.container {
+	display: inline-block;
+	clear: both;
+	width: 900px;
+	background-color: rgba(234,234,234,1.00);
+}
+.user{
+	display: inline-block;
+	text-align: right;
+	font-weight: bold;
+	width: 900px;
+}
+.orgttl{
+	font-size: 20px;
+	font-weight: bold;
+	color: rgba(2,157,193,1.00);
+}
