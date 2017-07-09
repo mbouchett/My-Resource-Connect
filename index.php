@@ -71,7 +71,11 @@ Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
  <a href="accountType.php" title="<?= $name ?>" >My Account</a>
 <?php if($type == "org") { ?> 
-<br> <a href="need/" >Post A Need</a> </br>
+<br> <a href="need/" >Post A Need</a> <br>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<?php } ?>
+<?php if($type == "donor") { ?> 
+<br>
 <span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
 <?php } ?>
 <?php }else{ ?>
