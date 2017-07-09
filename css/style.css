@@ -18,9 +18,13 @@ table {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
+.needttl {
+	background-color: rgba(2,157,193,1.00);
+}
 .tblhdr {
 	font-weight: bold;
 }
+
 .tableCol{
 	vertical-align: top;
 	display: inline-block;
