@@ -103,10 +103,10 @@ Needs<br>
 		<td><textarea name="description" rows="3" cols="50" readonly><?= $need[$i]['need_description'] ?></textarea></td>
 		<td><?= $need[$i]['need_by'] ?></td>
 		<td>
-			<?php if($name){ ?> 
+			<?php if($type == "donor"){ ?> 
 			<input type="button" value="Pledge" onclick="parent.location='pledge.php?need=<?= $need[$i]['need_ID'] ?>'" />
 			<?php }else { ?>
-			<a href="../login/sign_in.php" >Sign In</a>
+			<a href="../login/sign_in.php" title="Must Be Signed In With A DOnor Account" >Sign In</a>
 			<?php } ?>		
 		</td>
 	</tr>
