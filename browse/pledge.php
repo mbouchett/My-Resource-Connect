@@ -47,8 +47,11 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 	<button value="I can do this!" type="submit">I can do this!</button>
 </form>
 <hr width="900px">
-<form>
-
+<form action="processQuestion.php" method="POST">
+	I have a question about this need.<br>
+	<textarea name="message" rows="7" cols="70" placeholder="Enter your question about this need here.">
+	</textarea><br>
+	<button value="I can do this!" type="submit">Send this question to the organization</button>
 </form>
 </body>
 </html>
