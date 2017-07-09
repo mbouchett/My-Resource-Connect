@@ -104,9 +104,9 @@ Find out what's needed in your area and how YOU can help.
 		<?php } ?>				
 </div><br>
 <hr width="900px">
-What is needed right now!<br>
+<div class="needhdr">What is needed right now!</div>
 <table>
-	<tr><td>Needed</td><td>Organization</td><td>Title</td><td>Description</td><td>Pledge</td></tr>
+	<tr class="tblhdr"><td>Needed</td><td>Organization</td><td>Title</td><td>Description</td><td>Pledge</td></tr>
 	<?php for($i=0; $i<$needsCount; $i++){ ?>
 	<tr>
 		<td><?= substr($need[$i]['need_date'],0,10) ?></td>

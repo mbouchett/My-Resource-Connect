@@ -4,11 +4,22 @@ body {
  text-align: center;
  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
+table {
+	display: inline-block;
+}
 
 .frontpage{
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.needhdr {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.tblhdr {
+	font-weight: bold;
 }
 .tableCol{
 	vertical-align: top;
