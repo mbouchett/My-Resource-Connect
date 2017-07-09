@@ -41,9 +41,14 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 <hr width="900px">
 <?= $name ?> is ready to help you out!<br>
 <form action="processPledge.php" method="POST">
-Message to the organization:<br>
-<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge"></textarea>
+	Message to the organization:<br>
+	<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge">
+	</textarea><br>
+	<button value="I can do this!" type="submit">I can do this!</button>
 </form>
+<hr width="900px">
+<form>
 
+</form>
 </body>
 </html>

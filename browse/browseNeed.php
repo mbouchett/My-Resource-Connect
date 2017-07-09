@@ -2,6 +2,7 @@
 // need/addNeed.php
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
+$type = $_COOKIE['type'];
 $message = $_REQUEST['message'];
 include "../db.php";
 $subcat = $_REQUEST['subcat'];
@@ -66,6 +67,8 @@ td{border: black thin solid;}
 
 </head>
 <body>
+
+<!-- header portion -->
 <a href="../index.php"><img height="150" src="../images/logo.png" alt="My Resource Connect" /></a><br></br>
 
 <div>
@@ -73,8 +76,23 @@ td{border: black thin solid;}
     <div class="error"><span class="icon-warning red"><?= $message ?></span></div>
     <?php } ?>
 </div>
+<?php if($name){ ?> 
+ 
+<?php if($type == "org") { ?> 
+<br> <a href="need/" >Post A Need</a> <br>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<a href="accountType.php" title="<?= $name ?>" >My Account</a>
+<?php } ?>
+<?php if($type == "donor") { ?> 
+<br>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<?php } ?>
+<?php }else{ ?>
+<a href="login/sign_in.php" >Sign In</a>
+<?php } ?>
+<hr width="900px">
+<!-- end header portion -->
 
-<hr>
 Needs<br>
 <table>
 	<tr><td>Needed</td><td>Title</td><td>Description</td><td>Needed By</td><td>Pledge</td></tr>
