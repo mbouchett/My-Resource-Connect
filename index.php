@@ -72,11 +72,11 @@ Find out what's needed in your area and how YOU can help.
  <a href="accountType.php" title="<?= $name ?>" >My Account</a>
 <?php if($type == "org") { ?> 
 <br> <a href="need/" >Post A Need</a> <br>
-<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a></span>
 <?php } ?>
 <?php if($type == "donor") { ?> 
 <br>
-<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a></span>
 <?php } ?>
 <?php }else{ ?>
 <a href="login/sign_in.php" >Sign In</a>
@@ -113,7 +113,13 @@ Find out what's needed in your area and how YOU can help.
 		<td><?= $need[$i]['org_name'] ?></td>
 		<td class="needttl"><?= $need[$i]['need_title'] ?></td>
 		<td><textarea name="description" rows="3" cols="50" readonly><?= $need[$i]['need_description'] ?></textarea></td>
-		<td><input type="button" value="Pledge" /></td>
+		<td>
+			<?php if($name){ ?> 
+			<input type="button" value="Pledge" onclick="parent.location='browse/pledge.php?need=<?= $need[$i]['need_ID'] ?>'" />
+			<?php }else { ?>
+			<a href="login/sign_in.php" >Sign In</a>
+			<?php } ?>
+		</td>
 	</tr>
 	<?php }?>
 </table>
