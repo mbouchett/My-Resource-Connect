@@ -7,6 +7,10 @@ body {
 table {
 	display: inline-block;
 }
+td {
+	padding: 3px;
+	font-size: 12px;
+}
 
 .frontpage{
 	width: 900px;
