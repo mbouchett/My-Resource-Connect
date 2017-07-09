@@ -34,6 +34,32 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 <title>Pledge</title>
 </head>
 <body>
+
+<!-- header portion -->
+<a href="../index.php"><img height="150" src="../images/logo.png" alt="My Resource Connect" /></a><br></br>
+
+<div>
+    <?php if($message){ ?>
+    <div class="error"><span class="icon-warning red"><?= $message ?></span></div>
+    <?php } ?>
+</div>
+<?php if($name){ ?> 
+ 
+<?php if($type == "org") { ?> 
+<br> <a href="need/" >Post A Need</a> <br>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<a href="accountType.php" title="<?= $name ?>" >My Account</a>
+<?php } ?>
+<?php if($type == "donor") { ?> 
+<br>
+<span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
+<?php } ?>
+<?php }else{ ?>
+<a href="login/sign_in.php" >Sign In</a>
+<?php } ?>
+<hr width="900px">
+<!-- end header portion -->
+
 <?= $need['org_name'] ?><br>
 <?= $need['need_title'] ?><br>
 <hr width="900px">
