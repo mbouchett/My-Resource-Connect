@@ -100,7 +100,7 @@ Needs<br>
 	<tr>
 		<td><?= substr($need[$i]['need_date'],0,10) ?></td>
 		<td><?= $need[$i]['need_title'] ?></td>
-		<td><textarea name="description" rows="3" cols="50"><?= $need[$i]['need_description'] ?></textarea></td>
+		<td><textarea name="description" rows="3" cols="50" readonly><?= $need[$i]['need_description'] ?></textarea></td>
 		<td><?= $need[$i]['need_by'] ?></td>
 		<td><input type="button" value="Pledge" onclick="parent.location='pledge.php?need=<?= $need[$i]['need_ID'] ?>'" /></td>
 	</tr>

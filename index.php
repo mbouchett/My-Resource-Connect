@@ -112,7 +112,7 @@ Find out what's needed in your area and how YOU can help.
 		<td><?= substr($need[$i]['need_date'],0,10) ?></td>
 		<td><?= $need[$i]['org_name'] ?></td>
 		<td class="needttl"><?= $need[$i]['need_title'] ?></td>
-		<td><textarea name="description" rows="3" cols="50"><?= $need[$i]['need_description'] ?></textarea></td>
+		<td><textarea name="description" rows="3" cols="50" readonly><?= $need[$i]['need_description'] ?></textarea></td>
 		<td><input type="button" value="Pledge" /></td>
 	</tr>
 	<?php }?>
