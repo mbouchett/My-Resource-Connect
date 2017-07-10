@@ -111,7 +111,7 @@ Past Needs<br>
 		<td><?= $need[$i]['need_by'] ?></td>
 		<td><?= $need[$i]['pledge_by'] ?></td>
 		<td><?= $need[$i]['pledge_date'] ?></td>
-		<td><input type="button" value="Remove" /></td>
+		<td><input type="button" value="Remove" onclick="parent.location='processDeleteNeed.php?need=<?= $need[$i]['need_ID'] ?>'" /></td>
 	</tr>
 	<?php }?>
 </table>

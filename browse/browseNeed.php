@@ -79,7 +79,7 @@ td{border: black thin solid;}
 <?php if($name){ ?> 
  
 <?php if($type == "org") { ?> 
-<br> <a href="need/" >Post A Need</a> <br>
+<br> <a href="../need/" >Post A Need</a> <br>
 <span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a>
 <a href="accountType.php" title="<?= $name ?>" >My Account</a>
 <?php } ?>
@@ -106,7 +106,7 @@ Needs<br>
 			<?php if($type == "donor"){ ?> 
 			<input type="button" value="Pledge" onclick="parent.location='pledge.php?need=<?= $need[$i]['need_ID'] ?>'" />
 			<?php }else { ?>
-			<a href="../login/sign_in.php" title="Must Be Signed In With A DOnor Account" >Sign In</a>
+			<a href="../login/sign_in.php" title="Must Be Signed In With A Donor Account" >Sign In</a>
 			<?php } ?>		
 		</td>
 	</tr>

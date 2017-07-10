@@ -50,20 +50,16 @@ if($type == "org") {
 	
 	$sql = "INSERT `".$db_db."`.`orgs` (`org_name`, `org_email`, `org_pw`, `org_EIN`)
 	        VALUES ('$name', '$email', '$hash', '$ein')";
-	
 	//perform action and get the customerID generated
 	if ($db->query($sql) === TRUE) {
-	$ID = $db->insert_id;
-	} else $ID = 0;
-	mysqli_close($db); //close the connection
-	
-	// perform login and set cookies
-	if($ID > 0){
-	// account good - set cookies
-	    setcookie("ID", $ID, time() + (86400 * 30), "/"); // 86400 = 1 day
-	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
-		 setcookie("type", "org", time() + (86400 * 30), "/"); // 86400 = 1 day
+		$ID = $db->insert_id;
+		// account good - set cookies
+	   setcookie("ID", $ID, time() + (86400 * 30), "/"); // 86400 = 1 day
+	   setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
+		setcookie("type", "org", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
+	mysqli_close($db); //close the connection
+
 	// redirect to ...
 	header('Location: ../index.php');
 	die;
@@ -97,17 +93,14 @@ if($type == "donor"){
 
    //perform action and get the ID generated
 	if ($db->query($sql) === TRUE) {
-	$ID = $db->insert_id;
-	} else $ID = 0;
-	mysqli_close($db); //close the connection 
-	
-	// perform login and set cookies
-	if($ID > 0){
-	// account good - set cookies
+		$ID = $db->insert_id;
+		// account good - set cookies
 	    setcookie("ID", $ID, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("name", $name, time() + (86400 * 30), "/"); // 86400 = 1 day
 	    setcookie("type", "donor", time() + (86400 * 30), "/"); // 86400 = 1 day
 	}
+	mysqli_close($db); //close the connection 
+	
 	$chs = array("(", ")", ".", "-", " ");
 	$to = str_replace($chs, "", $phone);
 	$to = "+1".$to;

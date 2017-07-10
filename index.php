@@ -117,7 +117,7 @@ Find out what's needed in your area and how YOU can help.
 			<?php if($type == "donor"){ ?> 
 			<input type="button" value="Pledge" onclick="parent.location='browse/pledge.php?need=<?= $need[$i]['need_ID'] ?>'" />
 			<?php }else { ?>
-			<a href="login/sign_in.php" title="Must Be Signed In With A DOnor Account" >Sign In</a>
+			<a href="login/sign_in.php" title="Must Be Signed In With A Donor Account" >Sign In</a>
 			<?php } ?>
 		</td>
 	</tr>

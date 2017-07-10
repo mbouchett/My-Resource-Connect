@@ -25,9 +25,14 @@ if(!$need_by) $need_by = date('m/d/Y');
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 
 // sanitize input
+$need_title = str_replace("'", "", $need_title);
 $need_title = mysqli_real_escape_string($db, $need_title);
-$need_decsription = mysqli_real_escape_string($db, $need_decsription);
+$need_title = addslashes($need_title);
+$need_description = str_replace("'", "", $need_description);
+$need_description = mysqli_real_escape_string($db, $need_description);
+$need_description = addslashes($need_description);
 $need_by = mysqli_real_escape_string($db, $need_by);
+
 
 $sql = "INSERT `".$db_db."`.`needs` (`need_title`, `need_description`, `need_by`, `org_ID`, `subcat_ID`)
         VALUES ('$need_title', '$need_description', '$need_by', '$org_ID', '$subcat_ID')";

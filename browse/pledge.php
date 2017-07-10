@@ -68,15 +68,13 @@ if($result){
 	<?= $name ?> is ready to help you out!<br>
 	<form action="processPledge.php" method="POST">
 		Message to the organization:<br>
-		<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge. ***not required***">
-		</textarea><br>
+		<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge. ***not required***"></textarea><br>
 		<button value="I can do this!" type="submit">I can do this!</button>
 	</form>
 	<hr width="900px">
 	<form action="processQuestion.php" method="POST">
 		I have a question about this need.<br>
-		<textarea name="question" rows="7" cols="70" placeholder="Enter your question about this need here.">
-		</textarea><br>
+		<textarea name="question" rows="7" cols="70" placeholder="Enter your question about this need here."></textarea><br>
 		<button type="submit">Send this question to the organization</button>
 		<input type="hidden" name="donor_ID" value="<?= $ID ?>" />
 		<input type="hidden" name="need_ID" value="<?= $need['need_ID'] ?>" />
