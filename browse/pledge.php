@@ -23,9 +23,6 @@ if($result){
 	$need = mysqli_fetch_assoc($result);   	//Fetch and save The Current Record                                         		//Close The Loop
 }
 
-// load donor
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
-
 ?>
 <!DOCTYPE html>
 <html>
