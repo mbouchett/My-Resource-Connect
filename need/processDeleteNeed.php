@@ -7,8 +7,9 @@ if($type != "org") {
 	header('location: ../login');	
 }
 
-echo $type."<br>";
-echo $need_ID."<br>";
-
-
+$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
+$sql = "DELETE FROM `".$db_db."`.`needs` WHERE `need_ID`=".$need_ID;
+$result = mysqli_query($db, $sql);
+mysqli_close($db); 
+header('location: index.php');
 ?>

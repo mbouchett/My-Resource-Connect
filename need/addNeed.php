@@ -7,7 +7,7 @@ include "../db.php";
 $subcat = $_REQUEST['subcat'];
 
 //get subcats
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT * FROM `subcat`
         LEFT JOIN `cats`
         ON `subcat`.`cat_ID` = `cats`.`cat_ID`";
@@ -26,7 +26,7 @@ if($result){
 } 
 
 // load past needs
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT * FROM `needs`
         LEFT JOIN `orgs`
         ON `needs`.`org_ID` = `orgs`.`org_ID`
@@ -68,6 +68,14 @@ if($result){
   } );
   </script>
 <!-- End Calendars -->
+
+<script type="text/javascript">
+function deleteItem(itemNum) {
+	if (confirm("This action cannot be undone\n Cancel or OK to delete item")) {
+		window.location.href = 'processDeleteNeed.php?need=' + itemNum;
+	}
+}
+</script>
 
 <!-- Temporary Style Sheet -->
 <style>
@@ -111,7 +119,7 @@ Past Needs<br>
 		<td><?= $need[$i]['need_by'] ?></td>
 		<td><?= $need[$i]['pledge_by'] ?></td>
 		<td><?= $need[$i]['pledge_date'] ?></td>
-		<td><input type="button" value="Remove" onclick="parent.location='processDeleteNeed.php?need=<?= $need[$i]['need_ID'] ?>'" /></td>
+		<td><input type="button" value="Remove" onclick="deleteItem(<?= $need[$i]['need_ID'] ?>)" /></td>
 	</tr>
 	<?php }?>
 </table>

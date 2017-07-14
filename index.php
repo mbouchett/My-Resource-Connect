@@ -71,7 +71,7 @@ Find out what's needed in your area and how YOU can help.
 <?php if($name){ ?> 
  <a href="accountType.php" title="<?= $name ?>" >My Account</a>
 <?php if($type == "org") { ?> 
-<br> <a href="need/" >Post A Need</a> <br>
+<br> <a href="need/" >Manage Needs</a> <br>
 <span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a></span>
 <?php } ?>
 <?php if($type == "donor") { ?> 
@@ -117,7 +117,7 @@ Find out what's needed in your area and how YOU can help.
 			<?php if($type == "donor"){ ?> 
 			<input type="button" value="Pledge" onclick="parent.location='browse/pledge.php?need=<?= $need[$i]['need_ID'] ?>'" />
 			<?php }else { ?>
-			<a href="login/sign_in.php" title="Must Be Signed In With A Donor Account" >Sign In</a>
+			<a href="login/sign_in.php" title="Must Be Signed In With A Donor Account" >Sign In to Pledge</a>
 			<?php } ?>
 		</td>
 	</tr>
