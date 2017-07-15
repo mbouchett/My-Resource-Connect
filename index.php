@@ -4,6 +4,11 @@ $ID = $_COOKIE['ID'];
 $type = $_COOKIE['type'];
 
 include "db.php";
+
+$alert = $_REQUEST['alert'];
+// determine alert type if any
+if($alert == 1) $aMsg = "Your Question has been sent.";
+
 // get categories
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = 'SELECT * FROM `cats` ORDER BY `cat_name`';
@@ -80,6 +85,9 @@ Find out what's needed in your area and how YOU can help.
 <?php } ?>
 <?php }else{ ?>
 <a href="login/sign_in.php" >Sign In</a>
+<?php } ?>
+<?php if($aMsg) { ?>
+<span style="color: red;"><?= $aMsg ?></span>
 <?php } ?>
 <hr width="900px"><br>
 <div class="frontpage">

@@ -29,14 +29,28 @@ mysqli_close($db); 											//close the connection
 if($result){
 	$donor = mysqli_fetch_assoc($result);   			//Fetch and save The Current Record
 }
+// *** Build The Email ***
 
+// Set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+$headers .= 'From: <'.$donor[donor_email].'>' . "\r\n";
+$subject = "A potential donor has a question";
 
-//echo $donor_ID."<br>";
 $question = wordwrap($question,70);
-$need['org_email'] = "mb8023731035@gmail.com";
-//echo $donor['donor_email']."<br>";
+
+// $to = $need['org_email']; Removed for testing
+$to = "mb8023731035@gmail.com";
+$message = "This inquiry is reagrding your need titled: ";
+$message .= $need[need_title]."<br><br>";
+$message .= "<span style=\"font-weight: bold;\">Donor's question:</span> <br>";
+$message .= $question . "<hr>";
+ 
+// *** End Build Email ***
 
 //Send Mail
-mail($need['org_email'], "A donor has a question", $message);
+mail($to, $subject, $message, $headers);
+
+header('location: ../index.php?alert=1');
 die;
 ?>
