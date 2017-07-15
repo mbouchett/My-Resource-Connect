@@ -59,6 +59,8 @@ if($result){
 </div>
 <hr width="900px">
 <!-- end header portion -->
+
+	<!-- I'm Making A Pledge -->
 <div class="container">
 	<span class="orgttl"><?= $need['org_name'] ?></span><br>
 	<?= $need['need_title'] ?><br>
@@ -70,8 +72,12 @@ if($result){
 		Message to the organization:<br>
 		<textarea name="message" rows="7" cols="70" placeholder="Please incluse any message, comments or questions associated with your pledge. ***not required***"></textarea><br>
 		<button value="I can do this!" type="submit">I can do this!</button>
+		<input type="hidden" name="donor_ID" value="<?= $ID ?>" />
+		<input type="hidden" name="need_ID" value="<?= $need['need_ID'] ?>" />
 	</form>
 	<hr width="900px">
+	
+	<!-- I have A Question -->
 	<form action="processQuestion.php" method="POST">
 		I have a question about this need.<br>
 		<textarea name="question" rows="7" cols="70" placeholder="Enter your question about this need here."></textarea><br>
