@@ -3,7 +3,7 @@ $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $message = $_REQUEST['message'];
 
-include "../db.php";
+include "../txt/3731035";
 // get categories
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = 'SELECT * FROM `cats` ORDER BY `cat_name`';

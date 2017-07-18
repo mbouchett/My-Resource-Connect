@@ -3,7 +3,7 @@ $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $type = $_COOKIE['type'];
 
-include "db.php";
+include "txt/3731035";
 
 $alert = $_REQUEST['alert'];
 // determine alert type if any

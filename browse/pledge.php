@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "../txt/3731035";
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $type = $_COOKIE['type'];

@@ -8,7 +8,7 @@ if(!isset($_SESSION['username'])){
 }
 
 // include db credentials  $db_user, $db_pw, $db_db
-include "../db.php";
+include "../txt/3731035";
 
 // get categories
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

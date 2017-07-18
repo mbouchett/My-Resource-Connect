@@ -1,6 +1,6 @@
 <?php
 // processQuestion.php
-include "../db.php";
+include "../txt/3731035";
 $donor_ID = $_POST['donor_ID'];
 $question = $_POST['question'];
 $need_ID = $_POST['need_ID'];

@@ -1,5 +1,5 @@
 <?php
-include "../db.php";
+include "../txt/3731035";
 $type = $_COOKIE['type'];
 $need_ID = $_REQUEST['need'];
 

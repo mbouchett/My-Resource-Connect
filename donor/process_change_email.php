@@ -1,7 +1,7 @@
 <?php
 // establish default time for the server
 date_default_timezone_set('America/New_York');
-include "../db.php";
+include "../txt/3731035";
 
 //Get the userID
 $ID = $_COOKIE['ID'];

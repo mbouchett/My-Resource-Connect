@@ -4,7 +4,7 @@ $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $type = $_COOKIE['type'];
 $message = $_REQUEST['message'];
-include "../db.php";
+include "../txt/3731035";
 $subcat = $_REQUEST['subcat'];
 
 // load needs

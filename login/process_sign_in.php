@@ -2,7 +2,7 @@
 // establish default time for the server
 date_default_timezone_set('America/New_York');
 
- include_once "../db.php";
+ include_once "../txt/3731035";
 
 //Get variables posted from the sign_in.php form
 $type = $_POST['type'];

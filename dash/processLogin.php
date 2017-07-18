@@ -7,7 +7,7 @@ session_start(); // start up your PHP session!
 
 
 // include db credentials  $db_user, $db_pw, $db_db
-include "../db.php";
+include "../txt/3731035";
 
 //Check to see if user exists
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

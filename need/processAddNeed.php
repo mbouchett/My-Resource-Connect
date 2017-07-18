@@ -1,6 +1,6 @@
 <?php
 // processAddNeed.php
-include "../db.php";
+include "../txt/3731035";
 
 $org_ID = $_COOKIE['ID'];
 $need_title = $_POST['need_title'];

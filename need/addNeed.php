@@ -3,7 +3,7 @@
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $message = $_REQUEST['message'];
-include "../db.php";
+include "../txt/3731035";
 $subcat = $_REQUEST['subcat'];
 
 //get subcats
