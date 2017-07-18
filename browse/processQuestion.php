@@ -34,7 +34,7 @@ if($result){
 // Set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: <'.$donor[donor_email].'>' . "\r\n";
+$headers .= "From: ".$donor[donor_email]."\r\n";
 $subject = "A potential donor has a question";
 
 $question = wordwrap($question,70);
@@ -47,7 +47,6 @@ $message .= "<span style=\"font-weight: bold;\">Donor's question:</span> <br>";
 $message .= $question . "<hr>";
  
 // *** End Build Email ***
-
 //Send Mail
 mail($to, $subject, $message, $headers);
 
