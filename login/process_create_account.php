@@ -82,7 +82,7 @@ if($type == "donor"){
 	// enter new account into the database
 	$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 	
-	// sanitize input
+	// validate input
 	$phone = mysqli_real_escape_string($db, $phone);
 	$name = mysqli_real_escape_string($db, $name);
 	//the rest have already been verified pre-post

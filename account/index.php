@@ -2,7 +2,7 @@
 //account/index.php
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
-include "../db.php";
+include "../txt/3731035";
 //if not logged in redirect to login
 if(!$name){
 	header('location: ../login/');

@@ -53,6 +53,6 @@ $msg .= "<br><a href =\"www.myresourceconnect.org/rejectPledge.php?need=".$need_
 //Send Mail
 mail($to, $subject, $msg, $headers);
 
-header('location: ../index.php?alert=1');
+header('location: ../index.php?alert=2');
 die;
 ?>

@@ -1,7 +1,7 @@
 <?php
 // establish default time for the server
 date_default_timezone_set('America/New_York');
-include "../db.php";
+include "../txt/3731035";
 
 //Get the customerID
 $ID = $_COOKIE['ID'];
@@ -10,7 +10,7 @@ $email = $_POST['email'];
 
 // update the data
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
-//sanitize the data
+//validate the data
 $email = mysqli_real_escape_string($db, $email);
 
 

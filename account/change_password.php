@@ -2,7 +2,7 @@
 // Get the cookies
 $customerID = $_COOKIE['customerID'];
 $name = $_COOKIE['name'];
-include "../db.php";
+include "../txt/3731035";
 
 //if not logged in redirect to login
 if(!$name){

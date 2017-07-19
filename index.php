@@ -8,6 +8,7 @@ include "txt/3731035";
 $alert = $_REQUEST['alert'];
 // determine alert type if any
 if($alert == 1) $aMsg = "Your Question has been sent.";
+if($alert == 2) $aMsg = "Your Pledge has been sent.";
 
 // get categories
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);

@@ -8,9 +8,6 @@
 </head>
 
 <body>
-<?php
-include "../db.php";;
-?>
 <div class="loginformcontainer">
 <span class="largetext">Your Password Was Successfully Changed!</span><br>
 
