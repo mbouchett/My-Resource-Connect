@@ -63,7 +63,6 @@ if($type == "donor") {		//organization login $hash; /*					//donor login
 	
 	// Fetch the user data
 	$user=mysqli_fetch_assoc($result);
-	echo $user['donor_name'];
 	
 	// check to see if passwords match
 	if($hash != $user['donor_pw']){
