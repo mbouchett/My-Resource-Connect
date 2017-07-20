@@ -1,8 +1,9 @@
 <?php
-// processQuestion.php
+// pledgeResponse.php
 include "txt/3731035";
 $d = $_REQUEST['donor'];
 $n = $_REQUEST['need'];
+$msg = $_REQUEST['msg'];
 
 // load need
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
@@ -33,10 +34,13 @@ if($result){
 <?= $donor['donor_name'] ?> has made a pledge<br>
 
 Regarding your need: <?= $need['need_title'] ?><br>
-
-<button>Accept and close the need</button></br>
-<button>Accept and keep the need open</button></br>
-<button>Reject and close the need</button></br>
-<button>Reject and keep the need open</button></br>
+<?php if($msg) { ?>
+<?= $msg ?>
+<?php }else { ?>
+<a href="processPledgeResponse.php?pr=1&donor=<?= $d ?>&need=<?= $n ?>">Accept and close the need</a></br>
+<a href="processPledgeResponse.php?pr=2&donor=<?= $d ?>&need=<?= $n ?>">Accept and keep the need open</a></br>
+<a href="processPledgeResponse.php?pr=3&donor=<?= $d ?>&need=<?= $n ?>">Decline and close the need</a></br>
+<a href="processPledgeResponse.php?pr=4&donor=<?= $d ?>&need=<?= $n ?>">Decline and keep the need open</a></br>
+<?php } ?>
 </body>
 </html>
