@@ -6,7 +6,7 @@ $n = $_REQUEST['need'];
 $msg = $_REQUEST['msg'];
 
 // load need
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT * FROM `needs` WHERE `needs`.`need_ID`=".$n;
 $result = mysqli_query($db, $sql); 						// create the query object
 mysqli_close($db); 											//close the connection
@@ -15,7 +15,7 @@ if($result){
 }
 
 // load donor
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
 $sql = "SELECT * FROM `donors` WHERE `donor_ID`=".$d;
 $result = mysqli_query($db, $sql); 						// create the query object
 mysqli_close($db); 											//close the connection
