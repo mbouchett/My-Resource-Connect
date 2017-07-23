@@ -20,7 +20,7 @@ $sql = "SELECT `needs`.`need_ID`, `needs`.`org_ID`, `needs`.`need_date`,
 $result = mysqli_query($db, $sql); 						// create the query object
 mysqli_close($db); 											//close the connection
 if($result){
-	$need = mysqli_fetch_assoc($result);   	//Fetch and save The Current Record                                         		//Close The Loop
+	$need = mysqli_fetch_assoc($result);   	//Fetch and save The Current Record 
 }
 
 ?>

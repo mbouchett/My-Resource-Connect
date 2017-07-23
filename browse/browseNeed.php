@@ -13,13 +13,14 @@ if($subcat) {
 	$sql = "SELECT * FROM `needs`
 	     LEFT JOIN `subcat`
 	     ON `needs`.`subcat_ID` = `subcat`.`subcat_ID`
-	     WHERE `needs`.`subcat_ID`=".$subcat." 
+	     WHERE `needs`.`subcat_ID`=".$subcat." AND `needs`.`pledge_date` IS NULL
 	     ORDER BY `needs`.`need_date` DESC
 	     LIMIT 50";
 }else{
 	$sql = "SELECT * FROM `needs`
 	     LEFT JOIN `subcat`
 	     ON `needs`.`subcat_ID` = `subcat`.`subcat_ID` 
+	     WHERE `needs`.`pledge_date` IS NULL
 	     ORDER BY `needs`.`need_date` DESC
 	     LIMIT 50";
 }

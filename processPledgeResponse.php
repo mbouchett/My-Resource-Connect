@@ -23,8 +23,8 @@ $sql = "SELECT `needs`.`need_ID`, `needs`.`org_ID`, `needs`.`need_date`,
 		   `needs`.`need_title`, `needs`.`need_description`, `orgs`.`org_name`,
 		   `orgs`.`org_email`	
 		  FROM `needs`
-	     LEFT JOIN `orgs` ON `needs`.`org_ID` = `orgs`.`org_ID` 
-	     WHERE `needs`.`need_ID`=".$need_ID;
+	     LEFT JOIN `orgs` ON `needs`.`org_ID` = `orgs`.`org_ID`
+	     WHERE `needs`.`need_ID`=".$n;
      
 $result = mysqli_query($db, $sql); 						// create the query object
 mysqli_close($db); 											//close the connection
@@ -45,7 +45,7 @@ if($result){
 // Set content-type when sending HTML email
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: ".$need[org_email]."\r\n";
+$headers .= 'From:  ' . $need[org_name] . ' <' . $need[org_email] .">\r\n";
 $subject = $need[org_name]. " has reasponded to your pledge.";
 $to = $donor[donor_email];
 
@@ -59,7 +59,14 @@ if($pr == 1) {
 				WHERE `needs`.`need_ID` = ".$n; 
 	$result = mysqli_query($db, $sql);
 	mysqli_close($db); 
+	
 	// email the donor
+	$msg = "Thank You for your generous pledge!<br><br>";
+	$msg .= $need['org_name']. " greatfully accepts your pledge.<br>";
+	$msg .= "Please follow up with them directly by emailing them at: ".$need['org_email'];
+	
+	//Send Mail
+	mail($to, $subject, $msg, $headers);
 	
 	//return to the confirmation screen
 	header('location: pledgeResponse.php?msg="Pledge Accepted - Need Closed&donor='.$d.'&need='.$n);
@@ -69,6 +76,12 @@ if($pr == 1) {
 //pr=2">Accept and keep the need open
 if($pr == 2) {
 	// email the donor
+	$msg = "Thank You for your generous pledge!<br><br>";
+	$msg .= $need['org_name']. " greatfully accepts your pledge.<br>";
+	$msg .= "Please follow up with them directly by emailing them at: ".$need['org_email'];
+	
+	//Send Mail
+	mail($to, $subject, $msg, $headers);
 	
 	//return to the confirmation screen
 	header('location: pledgeResponse.php?msg="Pledge Accepted - Need Retained&donor='.$d.'&need='.$n);
@@ -85,8 +98,16 @@ if($pr == 3) {
 				WHERE `needs`.`need_ID` = ".$n; 
 	$result = mysqli_query($db, $sql);
 	mysqli_close($db); 
-	// email the donor
 	
+	// email the donor
+	$msg = "Thank You for your generous pledge!<br><br>";
+	$msg .= "However, " .$need['org_name']. " no longer has this need.<br>";
+	$msg .= "Please know that we are grateful and sincerly appreciate your offer to help.<br>";
+	$msg .= "We hope that we can find a way to work together in the future."; 
+	
+	//Send Mail
+	mail($to, $subject, $msg, $headers);
+		
 	//return to the confirmation screen
 	header('location: pledgeResponse.php?msg="Pledge Declined - Need Closed&donor='.$d.'&need='.$n);
 	die;
@@ -95,6 +116,13 @@ if($pr == 3) {
 //pr=4">Reject and keep the need open
 if($pr == 4) {
 	// email the donor
+	$msg = "Thank You for your generous pledge!<br><br>";
+	$msg .= "However, " .$need['org_name']. " we cannot accept your pledge at this time.<br>";
+	$msg .= "Please know that we are grateful and sincerly appreciate your offer to help.<br>";
+	$msg .= "We hope that we can find a way to work together in the future."; 
+	
+	//Send Mail
+	mail($to, $subject, $msg, $headers);
 	
 	//return to the confirmation screen
 	header('location: pledgeResponse.php?msg="Pledge Declined - Need Retained&donor='.$d.'&need='.$n);

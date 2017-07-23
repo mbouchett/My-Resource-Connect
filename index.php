@@ -49,6 +49,7 @@ $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 		   `needs`.`need_title`, `needs`.`need_description`, `orgs`.`org_name`	
 		  FROM `needs`
 	     LEFT JOIN `orgs` ON `needs`.`org_ID` = `orgs`.`org_ID` 
+	     WHERE `needs`.`pledge_date` IS NULL
 	     ORDER BY `needs`.`need_date` DESC
 	     LIMIT 10";
         

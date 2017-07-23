@@ -34,7 +34,7 @@ if($result){
 // Set content-type when sending HTML email
 $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-$headers .= 'From:  ' . $donor[donor_name] . ' <' . $donor[donor_email] .'>' . " \r\n";
+$headers .= 'From:  ' . $donor[donor_name] . ' <' . $donor[donor_email] .">\r\n";
 $headers .= 'Reply-To: '.$donor[donor_email]. "\r\n";
 $subject = "MyResourceConnect: ".$donor[donor_name]." has made a pledge";
 
