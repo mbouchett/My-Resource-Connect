@@ -35,23 +35,7 @@ if($result){
 }  
 
 // load past needs
-$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
-$sql = "SELECT * FROM `needs`
-        LEFT JOIN `orgs`
-        ON `needs`.`org_ID` = `orgs`.`org_ID`
-        WHERE `needs`.`org_ID`=".$ID." 
-        ORDER BY `needs`.`need_date` DESC
-        LIMIT 25";
-        
-$result = mysqli_query($db, $sql); 						// create the query object
-mysqli_close($db); 											//close the connection
-if($result){
-	$needsCount=mysqli_num_rows($result); 				//How many records meet select
-	//Store the Results To A Local Array
-	for($i=0; $i<$needsCount; $i++){         			//Iniate The Loop
-		$need[$i] = mysqli_fetch_assoc($result);   	//Fetch and save The Current Record
-	}                                           		//Close The Loop
-}
+include "loadPastNeeds.inc";
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -103,21 +87,7 @@ Please select a category or click
 <?php }?>
 </span>
 <hr>
-Past Needs<br>
-<table>
-	<tr><td>Re-Post</td><td>Needed</td><td>Title</td><td>Description</td><td>Needed By</td><td>Pleged By</td><td>Pleged On</td><td>Remove</td></tr>
-	<?php for($i=0; $i<$needsCount; $i++){ ?>
-	<tr>
-		<td><input type="button" value="Re-Post" /></td>
-		<td><?= substr($need[$i]['need_date'],0,10) ?></td>
-		<td><?= $need[$i]['need_title'] ?></td>
-		<td title="<?= $need[$i]['need_description'] ?>"><?= substr($need[$i]['need_description'], 0, 30)?>...</td>
-		<td><?= $need[$i]['need_by'] ?></td>
-		<td><?= $need[$i]['pledge_by'] ?></td>
-		<td><?= $need[$i]['pledge_date'] ?></td>
-		<td><input type="button" value="Remove" onclick="deleteItem(<?= $need[$i]['need_ID'] ?>)" /></td>
-	</tr>
-	<?php }?>
-</table>
+<!-- load display past needs -->
+<?php include "displayPastNeeds.inc"; ?>
 </body>
 </html>

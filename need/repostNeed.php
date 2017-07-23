@@ -1,34 +1,30 @@
 <?php
-// need/addNeed.php
+// need/processRepostNeed.php
+include "../txt/3731035";
 $name = $_COOKIE['name'];
 $ID = $_COOKIE['ID'];
 $message = $_REQUEST['message'];
-include "../txt/3731035";
-$subcat = $_REQUEST['subcat'];
+$type = $_COOKIE['type'];
+$n = $_REQUEST['need'];
 
-//get subcats
-$db = new mysqli('localhost', $db_user, $db_pw, $db_db);
-$sql = "SELECT * FROM `subcat`
-        LEFT JOIN `cats`
-        ON `subcat`.`cat_ID` = `cats`.`cat_ID`";
-        
-$result = mysqli_query($db, $sql); 			// create the query object
-mysqli_close($db); 	
-							//close the connection
+if($type != "org") {
+	header('location: ../login');	
+}
+// load original need
+$db= new mysqli('localhost', $db_user, $db_pw, $db_db);
+$sql = "SELECT * 	
+		  FROM `needs`
+	     WHERE `needs`.`need_ID`=".$n;
+     
+$result = mysqli_query($db, $sql); 						// create the query object
+mysqli_close($db); 											//close the connection
 if($result){
-	$catsCount = mysqli_num_rows($result); //How many records meet select
-	for($i=0; $i<$catsCount; $i++) {
-		$subCats[$i] = mysqli_fetch_assoc($result);
-		if($subCats[$i]['subcat_ID'] == $subcat) {
-			$subCatName = $subCats[$i]['subcat_name'];
-		}
-	}
-} 
+	$need = mysqli_fetch_assoc($result);   			//Fetch and save The Current Record
+}
 
 // load past needs
 include "loadPastNeeds.inc";
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,13 +78,13 @@ td{border: black thin solid;}
 <div>Post a new need for: <?= $subCatName ?></div><br>
 <div class="logn">
 	<form name="addneed" action="processAddNeed.php" method="post">
-	Give your need a title: <input type="text" name="need_title"><br><br>
+	Give your need a title: <input type="text" name="need_title" value="<?= $need[need_title] ?>"><br><br>
 	Describe your need:
-	<textarea name="need_description"></textarea></br><br>
+	<textarea name="need_description"><?= $need[need_description] ?></textarea></br><br>
 	The date this need will expire: <input class="datebox" default="ASAP" name="need_by" type="text" id="datepicker"><br><br>
 	<a onClick="document.addneed.submit()" class="thinbtn" type="submit">Add Need</a>
    <a href="../account" class="thinbtn" type="submit">Cancel</a>               		
-	<input type="hidden" name="subcat_ID" value="<?= $subcat ?>" />
+	<input type="hidden" name="subcat_ID" value="<?= $need[subcat_ID] ?>" />
 	</form>
 </div>
 <hr>

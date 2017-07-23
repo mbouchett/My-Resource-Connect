@@ -21,7 +21,7 @@ if(!$need_title || !$need_description){
 
 if(!$need_by) $need_by = date('m/d/Y');
 
-// update the data
+// insert the data
 $db= new mysqli('localhost', $db_user, $db_pw, $db_db);
 
 // sanitize input
