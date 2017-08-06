@@ -50,6 +50,7 @@ if($message) {
 	$msg .= "<span style=\"font-weight: bold;\">Donor's Comment:</span> <br>";
 	$msg .= $message . "<hr>";
 }
+$msg .= "<span style=\"color: RED;\">This link is a password! do not forward or reply directly from this email.</span></br>";
 $msg .= "<a href =\"www.myresourceconnect.org/pledgeResponse.php?need=".$need_ID."&donor=".$donor_ID."\" >Click Here to RESPOND to this pledge!</a></br>";
 // *** End Build Email ***
 //Send Mail
