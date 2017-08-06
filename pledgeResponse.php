@@ -29,18 +29,21 @@ if($result){
 <head>
 <meta charset="utf-8" />
 <title>Respond to a pledge</title>
+    <link rel="stylesheet" href="css/response_style.css" type="text/css" />
+	<link rel="SHORTCUT ICON" href="images/icon.png">
 </head>
 <body>
-<?= $donor['donor_name'] ?> has made a pledge<br>
+<img height="150" src="images/logo.png" alt="My Resource Connect" title="<?= $type ?>" /><br><br>
+<span class="donortext"><b><?= $donor['donor_name'] ?></b> has made a pledge</span><br><br>
 
-Regarding your need: <?= $need['need_title'] ?><br>
+Regarding your need: <b><?= $need['need_title'] ?></b><br>
 <?php if($msg) { ?>
-<?= $msg ?>
+<span class="donortext"><?= $msg ?></span>
 <?php }else { ?>
-<a href="processPledgeResponse.php?pr=1&donor=<?= $d ?>&need=<?= $n ?>">Accept and close the need</a></br>
-<a href="processPledgeResponse.php?pr=2&donor=<?= $d ?>&need=<?= $n ?>">Accept and keep the need open</a></br>
-<a href="processPledgeResponse.php?pr=3&donor=<?= $d ?>&need=<?= $n ?>">Decline and close the need</a></br>
-<a href="processPledgeResponse.php?pr=4&donor=<?= $d ?>&need=<?= $n ?>">Decline and keep the need open</a></br>
+<a class="acceptbtn" href="processPledgeResponse.php?pr=1&donor=<?= $d ?>&need=<?= $n ?>">Accept and close the need</a></br>
+<a class="acceptbtn" href="processPledgeResponse.php?pr=2&donor=<?= $d ?>&need=<?= $n ?>">Accept and keep the need open</a></br>
+<a class="declinebtn" href="processPledgeResponse.php?pr=3&donor=<?= $d ?>&need=<?= $n ?>">Decline and close the need</a></br>
+<a class="declinebtn" href="processPledgeResponse.php?pr=4&donor=<?= $d ?>&need=<?= $n ?>">Decline and keep the need open</a></br>
 <?php } ?>
 </body>
 </html>

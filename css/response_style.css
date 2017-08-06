@@ -1,0 +1,97 @@
+/* CSS Document */
+
+body {
+  background-size: 100%;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.red {
+  color: rgba(204, 0, 0, 1);
+}
+.white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.largetext {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.smalltext {
+  font-size: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+/* css for error messages */
+#error{
+    display: none;
+    border: solid 2px #CC0000;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 500px;
+}
+
+.error{
+    border: solid 2px #CC0000;
+    margin-top: 50px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 500px;
+}
+
+.acceptbtn {
+	display: inline-block;
+  border: solid rgba(23,40,44,1.00) 2px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+	margin: 10px;
+line-height: 30px;
+  background: rgba(55,205,0,1.00);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+	width: 300px;
+  cursor: pointer;
+}
+
+.acceptbtn:hover {
+  background-color: rgba(181, 194, 197, 1);
+}
+
+.declinebtn {
+	display: inline-block;
+  border: solid rgba(23,40,44,1.00) 2px;
+  border-radius: 20px 20px 20px 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+	margin: 10px;
+line-height: 30px;
+  background: rgba(191,71,0,1.00);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 1);
+  width: 300px;	
+  cursor: pointer;
+}
+
+.declinebtn:hover {
+  background-color: rgba(181, 194, 197, 1);
+}
+
+.donortext {
+	font-size: 20px;
+}
+
+/* ---
