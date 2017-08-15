@@ -10,7 +10,7 @@ function checkForReturn(e){
 }
 
 /*
-Validates data in the form and if valis submits the form
+Validates data in the form and if valid submits the form
 else returns error message
 */
 function validateForm(){

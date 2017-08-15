@@ -39,8 +39,7 @@ $subject = "A potential donor has a question";
 
 $question = wordwrap($question,70);
 
-// $to = $need['org_email']; Removed for testing
-$to = "mb8023731035@gmail.com";
+$to = $need['org_email']; Removed for testing
 $message = "This inquiry is reagrding your need titled: ";
 $message .= $need[need_title]."<br><br>";
 $message .= "<span style=\"font-weight: bold;\">Donor's question:</span> <br>";

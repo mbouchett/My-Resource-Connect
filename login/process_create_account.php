@@ -17,14 +17,6 @@ $phone = $_POST['phone'];
 //hash the password
 $hash=crypt($password, '$2a$07$theclockswerestrikingthirteen$');
 
-//echo $name."<br>";
-//echo $email."<br>";
-//echo $password."<br>";
-//echo $ein."<br>";
-//echo $date."<br>";
-//echo $phone."<br>";
-//echo $type."<br>";
-//exit;
 
 if($type == "org") {
 	// check to see if the user already exists

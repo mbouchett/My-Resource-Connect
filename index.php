@@ -86,7 +86,7 @@ Find out what's needed in your area and how YOU can help.
 <span style="font-size: 10px;">Currently Logged In As: <?= stripslashes($name) ?><a href="account/log_out.php"> (not you?)</a></span>
 <?php } ?>
 <?php }else{ ?>
-<a href="login/sign_in.php" >Sign In</a>
+<a href="login/sign_in.php" >Sign In<span style="font-size: 10px;"> or create new account</span></a>
 <?php } ?>
 <?php if($aMsg) { ?>
 <span style="color: red;"><?= $aMsg ?></span>

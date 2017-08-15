@@ -40,8 +40,7 @@ $subject = "MyResourceConnect: ".$donor[donor_name]." has made a pledge";
 
 $message = wordwrap($message,70);
 
-// $to = $need['org_email']; Removed for testing
-$to = "mb8023731035@gmail.com";
+$to = $need['org_email'];
 $msg = "This pledge is for your need titled: ";
 $msg .= $need[need_title]."<br>";
 $msg .= "This pledge is from: ".$donor[donor_name]."<br>";
